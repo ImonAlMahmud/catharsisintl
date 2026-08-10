@@ -24,7 +24,7 @@
   <header class="nav luxury-nav" id="nav" role="banner">
     <div class="nav__inner">
       <a href="${basePath}index.html" class="brand" aria-label="Catharsis International — Home">
-        <img class="brand__logo" src="${basePath}images/Logo.png" alt="Catharsis International">
+        <img class="brand__logo" src="${basePath}images/Logo.webp" alt="Catharsis International">
       </a>
       
       <nav class="nav__center" aria-label="Main navigation">
@@ -99,7 +99,7 @@
     <div class="footer__top-strip">
       <div class="footer-brand-meta">
         <div class="footer-logo-box">
-          <img class="footer-logo" src="${basePath}images/Logo.png" alt="Catharsis International">
+          <img class="footer-logo" src="${basePath}images/Logo.webp" alt="Catharsis International">
         </div>
       </div>
 
