@@ -245,13 +245,13 @@
   };
 
   var initialInterval = setInterval(function() {
-    if (!isDone && percent < 85) {
-      percent += 2;
-      if (percent > 85) percent = 85;
+    if (!isDone && percent < 70) {
+      percent += 6;
+      if (percent > 70) percent = 70;
       if (barFill) barFill.style.width = percent + '%';
       if (percentEl) percentEl.textContent = percent + '%';
     }
-  }, 30);
+  }, 16);
 
   function onLoaderModelReady() {
     loader3dLoaded = true;
@@ -269,7 +269,7 @@
 
     var showcaseInterval = setInterval(function() {
       if (percent < 100) {
-        percent += 5;
+        percent += 10;
         if (percent > 100) percent = 100;
         if (barFill) barFill.style.width = percent + '%';
         if (percentEl) percentEl.textContent = percent + '%';
