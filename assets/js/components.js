@@ -21,20 +21,6 @@
 
   const headerHTML = `
 <div class="global-header-wrapper" id="global-header">
-  <div class="header-topbar">
-    <div class="wrap">
-      <div class="topbar__info">
-        <span><i class="fa-solid fa-phone"></i> +880 9612 008811 / 8815</span>
-        <span><i class="fa-solid fa-envelope"></i> info@catharsisintl.com</span>
-      </div>
-      <div class="topbar__badges">
-        <span class="topbar-tag">RL.-549</span>
-        <span class="topbar-tag">ISO 9001:2015</span>
-        <span class="topbar-tag">BAIRA MEMBER</span>
-      </div>
-    </div>
-  </div>
-
   <header class="nav luxury-nav" id="nav" role="banner">
     <div class="nav__inner">
       <a href="${basePath}index.html" class="brand" aria-label="Catharsis International — Home">
@@ -98,7 +84,7 @@
   <a class="${isProcessPage || (isRecruitmentGroup && !isDocPage && !isSectorPage) ? 'active' : ''}" href="${basePath}recruitment-process.html">Recruitment Process</a>
   <a class="drawer__sublink ${isDocPage ? 'active' : ''}" href="${basePath}recruitment-documents.html"><i class="fa-solid fa-folder-open"></i> Required Documents</a>
   <a class="drawer__sublink ${isSectorPage ? 'active' : ''}" href="${basePath}job-sectors.html"><i class="fa-solid fa-briefcase"></i> Job Sectors</a>
-  <a class="${currentPath === 'grievance.html' ? 'active' : ''}" href="${basePath}grievance.html">Grievance / অভিযোগ</a>
+  <a class="${currentPath === 'grievance.html' ? 'active' : ''}" href="${basePath}grievance.html">Grievance</a>
   <a class="${currentPath === 'code-of-conduct.html' ? 'active' : ''}" href="${basePath}code-of-conduct.html">Code of Conduct</a>
   <a class="${currentPath === 'contact.html' ? 'active' : ''}" href="${basePath}contact.html">Contact Us</a>
   <a href="${basePath}contact.html#grievance">Grievance / অভিযোগ</a>
@@ -162,11 +148,11 @@
       <div class="footer__col">
         <h4>Group Entities</h4>
         <ul class="footer-links">
-          <li><a href="services.html"><i class="fa-solid fa-check"></i> Catharsis Training Centre</a></li>
-          <li><a href="services.html"><i class="fa-solid fa-check"></i> Medical Centre Ltd. (CMCL)</a></li>
-          <li><a href="services.html"><i class="fa-solid fa-check"></i> Catharsis Travels Ltd.</a></li>
-          <li><a href="index.html#zero-cost"><i class="fa-solid fa-check"></i> Zero Cost Migration</a></li>
-          <li><a href="index.html#certifications"><i class="fa-solid fa-check"></i> RBA &amp; IOM Certifications</a></li>
+          <li><a href="${basePath}services.html"><i class="fa-solid fa-check"></i> Catharsis Training Centre</a></li>
+          <li><a href="${basePath}services.html"><i class="fa-solid fa-check"></i> Medical Centre Ltd. (CMCL)</a></li>
+          <li><a href="${basePath}services.html"><i class="fa-solid fa-check"></i> Catharsis Travels Ltd.</a></li>
+          <li><a href="${basePath}about.html#zero-cost"><i class="fa-solid fa-check"></i> Zero Cost Migration</a></li>
+          <li><a href="${basePath}about.html#leadership"><i class="fa-solid fa-check"></i> RBA &amp; IOM Certifications</a></li>
         </ul>
       </div>
 
