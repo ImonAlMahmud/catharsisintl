@@ -4,13 +4,16 @@
    - Other Pages: Sleek Normal CSS Brand Spinner
    ============================================================ */
 (function initCatharsisSiteLoader() {
+  /* Check if current page is Home / Index Page */
+  var path = location.pathname;
+  var pageFile = path.split('/').pop();
+  var isHomePage = (!pageFile || pageFile === 'index.html' || pageFile === 'index' || path === '/');
+
+  /* If NOT homepage, do not render any loader */
+  if (!isHomePage) return;
+
   if (window.__catharsis3DLoaderInit) return;
   window.__catharsis3DLoaderInit = true;
-
-  /* Check if current page is Home / Index Page */
-  var pageFile = location.pathname.split('/').pop() || 'index.html';
-  if (!pageFile || pageFile === '/') pageFile = 'index.html';
-  var isHomePage = (pageFile === 'index.html' || pageFile === 'index');
 
   /* Determine relative base path based on directory depth */
   var pathSegments = location.pathname.split('/').filter(Boolean);

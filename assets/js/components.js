@@ -243,20 +243,26 @@
   const yrEl = document.getElementById('year');
   if (yrEl) yrEl.textContent = new Date().getFullYear();
 
-  /* Dynamically inject 3D Site Loader across all pages */
-  if (typeof THREE === 'undefined') {
-    const s1 = document.createElement('script'); s1.src = basePath + 'assets/libs/three.min.js';
-    const s2 = document.createElement('script'); s2.src = basePath + 'assets/libs/GLTFLoader.js';
-    const s3 = document.createElement('script'); s3.src = basePath + 'assets/js/loader3d.js';
-    s1.onload = () => {
-      document.head.appendChild(s2);
-      s2.onload = () => {
-        document.head.appendChild(s3);
+  /* Dynamically inject 3D Site Loader ONLY on Index Page */
+  const path = location.pathname;
+  const pageFile = path.split('/').pop();
+  const isHomePage = (!pageFile || pageFile === 'index.html' || pageFile === 'index' || path === '/');
+
+  if (isHomePage) {
+    if (typeof THREE === 'undefined') {
+      const s1 = document.createElement('script'); s1.src = basePath + 'assets/libs/three.min.js';
+      const s2 = document.createElement('script'); s2.src = basePath + 'assets/libs/GLTFLoader.js';
+      const s3 = document.createElement('script'); s3.src = basePath + 'assets/js/loader3d.js';
+      s1.onload = () => {
+        document.head.appendChild(s2);
+        s2.onload = () => {
+          document.head.appendChild(s3);
+        };
       };
-    };
-    document.head.appendChild(s1);
-  } else if (!window.__catharsis3DLoaderInit) {
-    const s3 = document.createElement('script'); s3.src = basePath + 'assets/js/loader3d.js';
-    document.head.appendChild(s3);
+      document.head.appendChild(s1);
+    } else if (!window.__catharsis3DLoaderInit) {
+      const s3 = document.createElement('script'); s3.src = basePath + 'assets/js/loader3d.js';
+      document.head.appendChild(s3);
+    }
   }
 })();
