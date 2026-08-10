@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recruitment Process — Catharsis International | 12-Step Transparent Manpower Placement | Dhaka</title>
+<meta name="description" content="Catharsis International follows a 12-step recruitment process from demand letter to post-arrival feedback. Learn how we source, screen, train, medically examine and deploy Bangladeshi workers to Asia and the Gulf.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.catharsisintl.com/recruitment-process.html">
+<meta property="og:title" content="Recruitment Process — Catharsis International | Transparent Manpower Placement">
+<meta property="og:description" content="Our 12-step recruitment process: from demand letter receipt to candidate feedback. Every step transparent and traceable.">
+<meta property="og:image" content="images/Logo.jpg">
+<meta property="og:url" content="https://www.catharsisintl.com/recruitment-process.html">
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/libs/fontawesome.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ============================================================
+   RECRUITMENT PROCESS PAGE — LUXURY REDESIGN STYLES
+   ============================================================ */
+
+/* Hero Section Styling */
+.proc-hero-wrap {
+  position: relative;
+  background: radial-gradient(ellipse at 80% 20%, #EBF2FF 0%, #F5F8FF 50%, #FFFFFF 100%);
+  padding-top: calc(38px + 76px + 40px);
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+.proc-hero-wrap::before {
+  content: ""; position: absolute; top: -10%; right: -5%; width: 50vw; height: 50vw; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,48,135,.07) 0%, rgba(200,16,46,.03) 50%, transparent 75%); filter: blur(70px); pointer-events: none;
+}
+.proc-hero-inner {
+  max-width: var(--max); margin: 0 auto; padding-inline: var(--pad); position: relative; z-index: 2;
+}
+.proc-hero-grid {
+  display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center;
+}
+.proc-hero-badge {
+  display: inline-flex; align-items: center; gap: 9px; padding: 7px 18px; border-radius: 999px;
+  background: rgba(0,48,135,.06); border: 1px solid rgba(0,48,135,.15); color: var(--blue-deep);
+  font-family: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 20px;
+}
+.proc-hero-badge i { color: var(--red) }
+.proc-hero-title {
+  font-family: var(--display); font-size: clamp(30px, 3.8vw, 48px); font-weight: 800; color: #001B48;
+  line-height: 1.15; letter-spacing: -.03em; margin-bottom: 18px;
+}
+.proc-hero-desc {
+  color: #475569; font-size: 15.5px; line-height: 1.65; max-width: 58ch; margin-bottom: 28px;
+}
+.proc-hero-stats {
+  display: flex; flex-wrap: wrap; gap: 20px; padding-top: 24px; border-top: 1px solid rgba(0,48,135,.1);
+}
+.hero-stat-pill {
+  display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 14px;
+  background: #FFFFFF; border: 1px solid rgba(0,48,135,.1); box-shadow: 0 4px 16px rgba(0,48,135,.04);
+}
+.hero-stat-pill i { color: var(--blue); font-size: 16px }
+.hero-stat-pill div { display: flex; flex-direction: column }
+.hero-stat-pill b { font-family: var(--accent); font-size: 13.5px; color: #001B48; font-weight: 700 }
+.hero-stat-pill span { font-size: 11px; color: var(--slate) }
+
+/* Interactive Toolbar */
+.proc-toolbar-card {
+  background: #FFFFFF; border: 1px solid rgba(0,48,135,.12); border-radius: 20px;
+  padding: 16px 24px; box-shadow: 0 10px 30px rgba(0,48,135,.06);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px;
+  margin-top: -30px; position: relative; z-index: 10; margin-bottom: 48px;
+}
+.proc-filter-group { display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+.proc-filter-btn {
+  padding: 8px 18px; border-radius: 999px; border: 1px solid rgba(0,48,135,.15);
+  background: rgba(255,255,255,.8); color: var(--blue-deep); font-family: var(--accent);
+  font-size: 13.5px; font-weight: 600; cursor: pointer; transition: all .25s var(--ease);
+}
+.proc-filter-btn:hover, .proc-filter-btn.active {
+  background: var(--blue); color: #FFFFFF; border-color: var(--blue); box-shadow: 0 4px 14px rgba(0,48,135,.25);
+}
+.proc-search-box {
+  position: relative; flex: 1; max-width: 320px; min-width: 220px;
+}
+.proc-search-box input {
+  width: 100%; padding: 10px 16px 10px 42px; border-radius: 999px;
+  border: 1px solid rgba(0,48,135,.18); font-family: var(--accent); font-size: 13.5px;
+  background: #F8FAFC; color: #001B48; outline: none; transition: all .25s var(--ease);
+}
+.proc-search-box input:focus {
+  background: #FFFFFF; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0,48,135,.12);
+}
+.proc-search-box i {
+  position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--blue); font-size: 14px;
+}
+
+/* Phase Headers */
+.phase-header-banner {
+  background: linear-gradient(135deg, #001B48 0%, #003087 100%);
+  border-radius: 20px; padding: 18px 28px; color: #FFFFFF; margin-top: 36px; margin-bottom: 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  box-shadow: 0 10px 28px rgba(0,27,72,.15);
+}
+.phase-header-left { display: flex; align-items: center; gap: 14px }
+.phase-header-icon {
+  width: 42px; height: 42px; border-radius: 12px; background: rgba(255,255,255,.15);
+  display: grid; place-items: center; font-size: 18px; color: #FFF; flex: none;
+}
+.phase-header-left h3 {
+  font-family: var(--display); font-size: 20px; font-weight: 700; color: #FFFFFF; margin: 0;
+}
+.phase-header-left span { font-size: 12.5px; color: rgba(255,255,255,0.8); display: block }
+.phase-step-tag {
+  background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); color: #FFF;
+  padding: 4px 14px; border-radius: 999px; font-family: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+}
+
+/* Timeline Step Card Enhancements */
+.proc-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 24px;
+}
+.proc-card {
+  background: #FFFFFF; border: 1.5px solid rgba(0,48,135,.1); border-radius: 22px;
+  padding: 24px; box-shadow: 0 10px 30px rgba(0,48,135,.05); transition: all .35s var(--ease);
+  display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;
+}
+.proc-card:hover {
+  transform: translateY(-5px); border-color: rgba(0,48,135,.25); box-shadow: 0 18px 40px rgba(0,48,135,.12);
+}
+.proc-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 16px }
+.proc-num-badge {
+  width: 44px; height: 44px; border-radius: 14px;
+  background: linear-gradient(135deg, var(--blue), #001B48); color: #FFFFFF;
+  font-family: var(--accent); font-weight: 800; font-size: 17px; display: grid; place-items: center;
+  box-shadow: 0 6px 18px rgba(0,48,135,.22); flex: none;
+}
+.proc-icon-wrap {
+  width: 40px; height: 40px; border-radius: 12px; background: rgba(0,48,135,.06); color: var(--blue);
+  display: grid; place-items: center; font-size: 18px; flex: none;
+}
+.proc-card h4 {
+  font-family: var(--display); font-size: 18px; font-weight: 700; color: #001B48; margin-bottom: 8px; line-height: 1.25;
+}
+.proc-card p { font-size: 13.5px; color: #475569; line-height: 1.6; margin: 0; flex: 1 }
+
+.proc-card-foot {
+  margin-top: 18px; padding-top: 14px; border-top: 1px dashed rgba(0,48,135,.12);
+  display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: var(--blue); font-weight: 600;
+}
+.proc-card-foot i { color: var(--gold); margin-right: 4px }
+
+/* Phase Overview Cards */
+.phase-overview-card {
+  background: #FFFFFF; border: 1.5px solid rgba(0,48,135,.1); border-radius: 24px; padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,48,135,.05); transition: all .35s var(--ease);
+}
+.phase-overview-card:hover {
+  transform: translateY(-5px); border-color: var(--blue); box-shadow: 0 18px 40px rgba(0,48,135,.12);
+}
+.phase-ov-icon {
+  width: 52px; height: 52px; border-radius: 16px; background: rgba(0,48,135,.07); color: var(--blue);
+  display: grid; place-items: center; font-size: 22px; margin-bottom: 20px;
+}
+
+/* CTA Banner */
+.proc-cta-banner {
+  background: linear-gradient(135deg, #001B48 0%, #003087 100%);
+  border-radius: 28px; padding: 48px 36px; color: #FFF; position: relative; overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,27,72,.2);
+}
+.proc-cta-banner::before {
+  content: ""; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,16,46,0.2) 0%, transparent 70%); filter: blur(50px);
+}
+.proc-cta-flex {
+  position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px;
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="cursor"></div><div id="cursor-ring"></div>
+
+<!-- HEADER COMPONENT -->
+<div id="header-component"></div>
+
+<main>
+
+<!-- LUXURY PAGE HERO REDESIGN -->
+<section class="proc-hero-wrap">
+  <div class="proc-hero-inner">
+    <div class="proc-hero-grid">
+      <div>
+        <div class="proc-hero-badge">
+          <i class="fa-solid fa-list-check"></i> 12-Step Placement Workflow
+        </div>
+        <h1 class="proc-hero-title">
+          Transparent 12-Step <br>
+          <span style="color:var(--blue);background:linear-gradient(135deg, var(--blue), var(--red));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Recruitment Journey</span>
+        </h1>
+        <p class="proc-hero-desc">
+          Every placement file follows the same transparent, audit-ready sequence. From demand letter logging to pre-departure training and post-arrival worker feedback — Catharsis International manages every single milestone.
+        </p>
+        <p class="crumb" style="margin-bottom:0">
+          <a href="index.html">Home</a> / <span>Recruitment Process</span>
+        </p>
+      </div>
+
+      <!-- Quick Stats Showcase Card -->
+      <div class="proc-hero-stats">
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-route"></i>
+          <div>
+            <b>100% Traceable Pipeline</b>
+            <span>Real-Time File Status Updates</span>
+          </div>
+        </div>
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <b>Govt &amp; BMET Clearance</b>
+            <span>MoEWOE Approved Protocol</span>
+          </div>
+        </div>
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-hospital-user"></i>
+          <div>
+            <b>In-House CMCL Medical</b>
+            <span>100% Health Standard Certified</span>
+          </div>
+        </div>
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-plane-up"></i>
+          <div>
+            <b>Travels &amp; Transit Logistics</b>
+            <span>Catharsis Travels Deployment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN TIMELINE SECTION -->
+<section class="section" style="padding-top:20px">
+  <div class="wrap">
+    
+    <!-- INTERACTIVE TOOLBAR: FILTER & SEARCH -->
+    <div class="proc-toolbar-card reveal">
+      <div class="proc-filter-group" id="proc-filters">
+        <button class="proc-filter-btn active" data-phase="all">All 12 Steps</button>
+        <button class="proc-filter-btn" data-phase="1">Phase 1: Sourcing (01-06)</button>
+        <button class="proc-filter-btn" data-phase="2">Phase 2: Formalities (07-09)</button>
+        <button class="proc-filter-btn" data-phase="3">Phase 3: Deployment (10-12)</button>
+      </div>
+      
+      <div class="proc-search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="proc-search-input" placeholder="Search step name or keyword..." aria-label="Search steps">
+      </div>
+    </div>
+
+    <!-- 12 STEPS CONTAINER -->
+    <div id="steps-container">
+
+      <!-- ================= PHASE 1 ================= -->
+      <div class="phase-group" data-phase-id="1">
+        <div class="phase-header-banner reveal">
+          <div class="phase-header-left">
+            <div class="phase-header-icon"><i class="fa-solid fa-users-gear"></i></div>
+            <div>
+              <h3>Phase 01: Pre-Employment &amp; Candidate Sourcing</h3>
+              <span>Demand analysis, vacancy broadcasting, trade testing &amp; document dossier compiling</span>
+            </div>
+          </div>
+          <span class="phase-step-tag">Steps 01 → 06</span>
+        </div>
+
+        <div class="proc-grid">
+          <!-- STEP 1 -->
+          <div class="proc-card reveal" data-search="requirement received demand letter logging category terms">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">01</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-file-signature"></i></div>
+              </div>
+              <h4>Requirement Received</h4>
+              <p>Catharsis International receives the official demand letter from the foreign employer, specifying trade categories, headcount, salary packages, and service terms. Logged the same day.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-clock"></i> Same-Day File Logging</span>
+              <span>SLA: 24h</span>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="proc-card reveal" data-d="1" data-search="requirement analysis feasibility trade clarity headcount">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">02</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+              </div>
+              <h4>Requirement Analysis</h4>
+              <p>Requirements are analyzed for trade clarity, salary corridor feasibility, medical standards, and visa headcount logistics. Clarifications raised within 48 hours.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-circle-check"></i> Feasibility Assessment</span>
+              <span>SLA: 48h</span>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="proc-card reveal" data-d="2" data-search="vacancy advertisement sourcing broadcast data bank district network">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">03</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-bullhorn"></i></div>
+              </div>
+              <h4>Vacancy Advertisement</h4>
+              <p>The vacancy is published across our nationwide district-level sourcing network, Govt Data Bank, verified media channels, and registered district partner hubs.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-network-wired"></i> Nationwide Broadcasting</span>
+              <span>Districts: 64</span>
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div class="proc-card reveal" data-search="shortlisting candidates screening physical fitness background document">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">04</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-user-check"></i></div>
+              </div>
+              <h4>Shortlisting Candidates</h4>
+              <p>Candidates are shortlisted from the Govt Data Bank and direct applications, screened against experience, trade certificates, physical fitness, and document validity.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-filter"></i> Strict Pre-Screening</span>
+              <span>Pass Rate: High</span>
+            </div>
+          </div>
+
+          <!-- STEP 5 -->
+          <div class="proc-card reveal" data-d="1" data-search="interview skills evaluation trade center score video panel">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">05</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-award"></i></div>
+              </div>
+              <h4>Interview &amp; Skills Evaluation</h4>
+              <p>Employers interview candidates in person, via video link, or through our delegated expert panel. Accredited trade testing centres evaluate skills and issue scores.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-star"></i> Accredited Trade Testing</span>
+              <span>Live &amp; Remote</span>
+            </div>
+          </div>
+
+          <!-- STEP 6 -->
+          <div class="proc-card reveal" data-d="2" data-search="document submission dossier passport certificate police clearance dossier">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">06</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-folder-closed"></i></div>
+              </div>
+              <h4>Document Submission</h4>
+              <p>Selected candidates' complete dossiers — passport, trade certificates, police clearance, and educational credentials — are compiled and submitted for final approval.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-folder-tree"></i> Full Dossier Verification</span>
+              <span>100% Audit Ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= PHASE 2 ================= -->
+      <div class="phase-group" data-phase-id="2">
+        <div class="phase-header-banner reveal">
+          <div class="phase-header-left">
+            <div class="phase-header-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h3>Phase 02: Legal, Contract &amp; Medical Clearance</h3>
+              <span>Bangla contract explanations, CMCL medical exams &amp; Ministry visa endorsement</span>
+            </div>
+          </div>
+          <span class="phase-step-tag">Steps 07 → 09</span>
+        </div>
+
+        <div class="proc-grid">
+          <!-- STEP 7 -->
+          <div class="proc-card reveal" data-search="employment offer contract agreement bangla transparent terms">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">07</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-file-contract"></i></div>
+              </div>
+              <h4>Employment Offer &amp; Contract</h4>
+              <p>Selected candidates receive official offers. The employment contract is thoroughly explained to the worker in Bangla before signing, ensuring transparent 2-year terms.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-language"></i> Explained in Bangla</span>
+              <span>Ethical Standard</span>
+            </div>
+          </div>
+
+          <!-- STEP 8 -->
+          <div class="proc-card reveal" data-d="1" data-search="medical examination clinic cmcl health screening host country">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">08</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
+              </div>
+              <h4>Medical Examination</h4>
+              <p>Candidates undergo comprehensive medical &amp; physical health screening at our own Catharsis Medical Centre Ltd. — ensuring 100% compliance with host-country standards.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-hospital-user"></i> In-House CMCL Clinic</span>
+              <span>GCC Certified</span>
+            </div>
+          </div>
+
+          <!-- STEP 9 -->
+          <div class="proc-card reveal" data-d="2" data-search="visa immigration clearance bmet power attorney moewoe passport">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">09</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-passport"></i></div>
+              </div>
+              <h4>Visa &amp; Immigration Clearance</h4>
+              <p>Catharsis International manages complete documentation, Power of Attorney, visa endorsement, and BMET immigration clearance under the Ministry of Expatriates' Welfare.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-stamp"></i> BMET Smart Clearance</span>
+              <span>Govt Approved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= PHASE 3 ================= -->
+      <div class="phase-group" data-phase-id="3">
+        <div class="phase-header-banner reveal">
+          <div class="phase-header-left">
+            <div class="phase-header-icon"><i class="fa-solid fa-plane-departure"></i></div>
+            <div>
+              <h3>Phase 03: Deployment, Flight &amp; Post-Arrival</h3>
+              <span>Orientation briefings, flight ticketing by Catharsis Travels &amp; post-arrival feedback</span>
+            </div>
+          </div>
+          <span class="phase-step-tag">Steps 10 → 12</span>
+        </div>
+
+        <div class="proc-grid">
+          <!-- STEP 10 -->
+          <div class="proc-card reveal" data-search="pre departure orientation training center bangla safety laws">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">10</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-chalkboard-user"></i></div>
+              </div>
+              <h4>Pre-Departure Orientation</h4>
+              <p>Workers attend mandatory orientation at our Catharsis Training Centre covering work duties, host-country laws, safety protocols, and workplace ethics in Bangla.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-school"></i> Catharsis Training Center</span>
+              <span>Pre-Departure Briefing</span>
+            </div>
+          </div>
+
+          <!-- STEP 11 -->
+          <div class="proc-card reveal" data-d="1" data-search="itinerary travel logistics flight booking catharsis travels escort">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">11</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-plane-departure"></i></div>
+              </div>
+              <h4>Itinerary &amp; Travel Logistics</h4>
+              <p>Catharsis Travels Ltd. finalizes all flight bookings, transit logistics, and airport clearance — escorting worker batches to the airport for on-time flight departure.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-plane-up"></i> Catharsis Travels Ltd.</span>
+              <span>Airport Escort</span>
+            </div>
+          </div>
+
+          <!-- STEP 12 -->
+          <div class="proc-card reveal" data-d="2" data-search="client candidate feedback post arrival support grievance check in">
+            <div>
+              <div class="proc-card-top">
+                <div class="proc-num-badge">12</div>
+                <div class="proc-icon-wrap"><i class="fa-solid fa-comments"></i></div>
+              </div>
+              <h4>Client &amp; Candidate Feedback</h4>
+              <p>Post-arrival check-ins with both employer and deployed workers. We collect feedback and maintain continuous post-deployment support and grievance resolution channels.</p>
+            </div>
+            <div class="proc-card-foot">
+              <span><i class="fa-solid fa-headset"></i> Continuous Post-Deployment</span>
+              <span>24/7 Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /steps-container -->
+  </div>
+</section>
+
+<!-- 3-PHASE AT A GLANCE SUMMARY SECTION -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section-head center reveal" style="max-width:720px">
+      <p class="eyebrow eyebrow--center"><i class="fa-solid fa-layer-group"></i> Executive Summary</p>
+      <h2>Three Core Placement Milestones</h2>
+      <p class="lede" style="margin-top:14px">Every recruitment project is tracked across these three operational phases with complete employer visibility.</p>
+    </div>
+
+    <div class="grid-3" style="margin-top:36px">
+      <div class="phase-overview-card reveal">
+        <div class="phase-ov-icon"><i class="fa-solid fa-users-gear"></i></div>
+        <h3 style="font-family:var(--display);font-size:20px;font-weight:700;color:#001B48;margin-bottom:10px">01. Candidate Sourcing</h3>
+        <p style="font-size:14px;color:#475569;line-height:1.6;margin:0">Steps 01–06: Demand letter receipt, analysis, vacancy advertising, shortlisting, accredited trade testing, and dossier compilation.</p>
+        <div style="margin-top:20px;font-family:var(--accent);font-size:12.5px;color:var(--blue);font-weight:700;letter-spacing:1px">STEPS 01 → 06</div>
+      </div>
+
+      <div class="phase-overview-card reveal" data-d="1">
+        <div class="phase-ov-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3 style="font-family:var(--display);font-size:20px;font-weight:700;color:#001B48;margin-bottom:10px">02. Legal &amp; Medical</h3>
+        <p style="font-size:14px;color:#475569;line-height:1.6;margin:0">Steps 07–09: Contract explanation in Bangla, comprehensive CMCL medical examination, visa endorsement &amp; BMET clearance.</p>
+        <div style="margin-top:20px;font-family:var(--accent);font-size:12.5px;color:var(--blue);font-weight:700;letter-spacing:1px">STEPS 07 → 09</div>
+      </div>
+
+      <div class="phase-overview-card reveal" data-d="2">
+        <div class="phase-ov-icon"><i class="fa-solid fa-plane-departure"></i></div>
+        <h3 style="font-family:var(--display);font-size:20px;font-weight:700;color:#001B48;margin-bottom:10px">03. Flight &amp; Feedback</h3>
+        <p style="font-size:14px;color:#475569;line-height:1.6;margin:0">Steps 10–12: Pre-departure orientation at Catharsis Training Center, Catharsis Travels flight logistics, and post-arrival check-ins.</p>
+        <div style="margin-top:20px;font-family:var(--accent);font-size:12.5px;color:var(--blue);font-weight:700;letter-spacing:1px">STEPS 10 → 12</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INQUIRY CTA BANNER -->
+<section class="section">
+  <div class="wrap">
+    <div class="proc-cta-banner reveal">
+      <div class="proc-cta-flex">
+        <div>
+          <span style="font-family:var(--accent);font-size:13px;font-weight:600;letter-spacing:1px;color:var(--gold);text-transform:uppercase">Start a Deployment Project</span>
+          <h2 style="font-size:clamp(24px,3vw,34px);font-weight:800;color:#FFF;margin-top:6px;margin-bottom:12px;line-height:1.25">Have a Manpower Vacancy to Fill?</h2>
+          <p style="color:rgba(255,255,255,0.85);font-size:15px;max-width:560px;margin:0;line-height:1.6">
+            Send us your Demand Letter today. We respond with a customized sourcing plan, trade testing schedule, and deployment timeline within two working days.
+          </p>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-hero-primary" href="contact.html">
+            <span>Submit Demand Letter</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+          <a class="btn btn-hero-secondary" href="https://wa.me/8801335143358" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp" style="color:#25D366"></i>
+            <span>WhatsApp Support</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER COMPONENT -->
+<div id="footer-component"></div>
+
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- INTERACTIVE FILTER & SEARCH JS -->
+<script>
+(function initProcFilterAndSearch() {
+  const filterBtns = document.querySelectorAll('#proc-filters .proc-filter-btn');
+  const searchInput = document.getElementById('proc-search-input');
+  const phaseGroups = document.querySelectorAll('#steps-container .phase-group');
+  const cards = document.querySelectorAll('#steps-container .proc-card');
+
+  let activePhase = 'all';
+  let searchQuery = '';
+
+  function filterSteps() {
+    phaseGroups.forEach(group => {
+      const groupPhaseId = group.getAttribute('data-phase-id');
+      const matchesPhase = (activePhase === 'all' || activePhase === groupPhaseId);
+
+      let visibleInGroup = 0;
+      const groupCards = group.querySelectorAll('.proc-card');
+
+      groupCards.forEach(card => {
+        const searchAttr = card.getAttribute('data-search') || '';
+        const cardText = (card.textContent + ' ' + searchAttr).toLowerCase();
+        const matchesSearch = !searchQuery || cardText.includes(searchQuery);
+
+        if (matchesPhase && matchesSearch) {
+          card.style.display = 'flex';
+          visibleInGroup++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (visibleInGroup > 0 && matchesPhase) {
+        group.style.display = 'block';
+      } else {
+        group.style.display = 'none';
+      }
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activePhase = btn.getAttribute('data-phase');
+      filterSteps();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      filterSteps();
+    });
+  }
+})();
+</script>
+</body>
+</html>

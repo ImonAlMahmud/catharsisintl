@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grievance &amp; Complaint Redressal System — Catharsis International | RL-549</title>
+<meta name="description" content="Catharsis International official Grievance &amp; Complaint Redressal portal. 100% confidential and anonymous worker support during recruitment and post-deployment.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.catharsisintl.com/grievance.html">
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/libs/fontawesome.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ============================================================
+   GRIEVANCE PAGE — LUXURY REDESIGN STYLES
+   ============================================================ */
+
+/* Hero Section Styling */
+.griev-hero-wrap {
+  position: relative;
+  background: radial-gradient(ellipse at 80% 20%, #EBF2FF 0%, #F5F8FF 50%, #FFFFFF 100%);
+  padding-top: calc(38px + 76px + 40px);
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+.griev-hero-wrap::before {
+  content: ""; position: absolute; top: -10%; right: -5%; width: 50vw; height: 50vw; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,48,135,.07) 0%, rgba(200,16,46,.03) 50%, transparent 75%); filter: blur(70px); pointer-events: none;
+}
+.griev-hero-inner {
+  max-width: 1320px; margin: 0 auto; padding-inline: var(--pad); position: relative; z-index: 2;
+}
+.griev-hero-grid {
+  display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center;
+}
+.griev-hero-badge {
+  display: inline-flex; align-items: center; gap: 9px; padding: 7px 18px; border-radius: 999px;
+  background: rgba(0,48,135,.06); border: 1px solid rgba(0,48,135,.15); color: var(--blue-deep);
+  font-family: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 20px;
+}
+.griev-hero-badge i { color: var(--red) }
+.griev-hero-title {
+  font-family: var(--display); font-size: clamp(30px, 3.8vw, 48px); font-weight: 800; color: #001B48;
+  line-height: 1.15; letter-spacing: -.03em; margin-bottom: 18px;
+}
+.griev-hero-desc {
+  color: #475569; font-size: 15.5px; line-height: 1.65; max-width: 58ch; margin-bottom: 28px;
+}
+.griev-hero-stats {
+  display: flex; flex-wrap: wrap; gap: 20px; padding-top: 24px; border-top: 1px solid rgba(0,48,135,.1);
+}
+.hero-stat-pill {
+  display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 14px;
+  background: #FFFFFF; border: 1px solid rgba(0,48,135,.1); box-shadow: 0 4px 16px rgba(0,48,135,.04);
+}
+.hero-stat-pill i { color: var(--blue); font-size: 16px }
+.hero-stat-pill div { display: flex; flex-direction: column }
+.hero-stat-pill b { font-family: var(--accent); font-size: 13.5px; color: #001B48; font-weight: 700 }
+.hero-stat-pill span { font-size: 11px; color: var(--slate) }
+
+/* Bilingual Cards Grid */
+.bilingual-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 36px;
+}
+@media (max-width: 900px) {
+  .bilingual-grid { grid-template-columns: 1fr; }
+  .griev-hero-grid { grid-template-columns: 1fr; }
+}
+.bilingual-card {
+  background: #FFFFFF; border-radius: 24px; padding: 32px;
+  box-shadow: 0 10px 30px rgba(0,48,135,0.05); border: 1px solid rgba(0,48,135,0.1);
+  position: relative; overflow: hidden; transition: all .35s var(--ease);
+}
+.bilingual-card:hover {
+  transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,48,135,0.1);
+}
+.bilingual-card.card-bn { border-top: 5px solid var(--red) }
+.bilingual-card.card-en { border-top: 5px solid var(--blue-deep) }
+
+.bilingual-head { display: flex; align-items: center; gap: 16px; margin-bottom: 16px }
+.bilingual-icon {
+  width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; font-size: 22px; flex: none;
+}
+.card-bn .bilingual-icon { background: rgba(227,27,35,0.1); color: var(--red) }
+.card-en .bilingual-icon { background: rgba(0,48,135,0.1); color: var(--blue-deep) }
+
+.bilingual-head h3 { font-family: var(--display); font-size: 22px; color: #001B48; margin: 0; line-height: 1.25 }
+.bilingual-head span { font-size: 13px; color: var(--slate); font-weight: 500; display: block; margin-top: 2px }
+.bilingual-card p { font-size: 15px; color: #475569; line-height: 1.75; margin: 0 }
+
+/* Main Section Split */
+.grievance-main-grid {
+  display: grid; grid-template-columns: 440px 1fr; gap: 36px; align-items: start;
+}
+@media (max-width: 1024px) {
+  .grievance-main-grid { grid-template-columns: 1fr; }
+}
+
+/* Left Column Info Cards */
+.info-channel-card {
+  background: #FFFFFF; border: 1.5px solid rgba(0,48,135,0.1); border-radius: 20px; padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,48,135,0.03); display: flex; flex-direction: column; gap: 12px;
+}
+.channel-row {
+  display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 12px;
+  background: #F8FAFC; border: 1px solid rgba(0,48,135,0.08); transition: all .25s var(--ease);
+}
+.channel-row:hover {
+  background: #FFFFFF; border-color: rgba(0,48,135,0.2); box-shadow: 0 4px 14px rgba(0,48,135,0.06);
+}
+.channel-icon {
+  width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; font-size: 15px; flex: none;
+}
+
+.guidelines-box {
+  background: #FFFFFF; border: 1.5px solid rgba(0,48,135,0.1); border-radius: 20px; padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,48,135,0.03);
+}
+.guidelines-box ul { padding-left: 18px; margin: 0; font-size: 13px; color: #475569; line-height: 1.7 }
+
+.anonymity-card {
+  background: linear-gradient(135deg, #001B48 0%, #003087 100%); border-radius: 20px; padding: 20px;
+  color: #FFFFFF; box-shadow: 0 14px 35px rgba(0,27,72,0.18);
+}
+
+/* Form Card Styling — Sleek Breathable Design */
+.grievance-form-card {
+  background: #FFFFFF; border: 1.5px solid rgba(0,48,135,0.12); border-radius: 24px; padding: 32px 36px;
+  box-shadow: 0 16px 40px rgba(0,48,135,0.05); position: relative; overflow: hidden;
+}
+.grievance-form-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, #003087 0%, #E31B23 50%, #C99700 100%);
+}
+
+.field { display: flex; flex-direction: column; gap: 6px }
+.field label { font-family: var(--accent); font-size: 12.5px; font-weight: 700; color: #001B48 }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 10px 14px; border-radius: 10px; border: 1.5px solid rgba(0,48,135,0.14);
+  font-family: var(--accent); font-size: 13.5px; color: #001B48; background: #F8FAFC; outline: none;
+  transition: all .25s var(--ease);
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  background: #FFFFFF; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0,48,135,0.1);
+}
+
+/* Redressal 2x2 Protocol Cards */
+.redressal-grid-2x2 {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 36px;
+}
+@media (max-width: 900px) {
+  .redressal-grid-2x2 { grid-template-columns: 1fr; }
+}
+.redressal-card {
+  background: #FFFFFF; border: 1.5px solid rgba(0,48,135,.1); border-radius: 24px; padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,48,135,.04); transition: all .35s var(--ease);
+}
+.redressal-card:hover {
+  transform: translateY(-5px); border-color: var(--blue); box-shadow: 0 18px 40px rgba(0,48,135,.12);
+}
+.redressal-icon-wrap {
+  width: 56px; height: 56px; border-radius: 18px; display: grid; place-items: center; font-size: 24px;
+  position: relative; flex: none;
+}
+.redressal-step-badge {
+  position: absolute; top: -8px; right: -10px; background: var(--blue-deep); color: #FFF;
+  font-family: var(--accent); font-weight: 800; font-size: 10px; padding: 3px 9px; border-radius: 999px;
+  letter-spacing: 0.5px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.redressal-time-tag {
+  display: inline-flex; align-items: center; gap: 6px; font-family: var(--accent); font-size: 12px;
+  font-weight: 700; color: var(--slate); background: rgba(0,48,135,0.06); padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.redressal-guarantee-strip {
+  background: linear-gradient(135deg, #001B48 0%, #003087 100%); border-radius: 24px; padding: 28px 36px;
+  color: #FFF; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+  box-shadow: 0 16px 40px rgba(0,27,72,0.2);
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="cursor"></div><div id="cursor-ring"></div>
+
+<!-- HEADER COMPONENT -->
+<div id="header-component"></div>
+
+<main>
+
+<!-- LUXURY PAGE HERO REDESIGN -->
+<section class="griev-hero-wrap">
+  <div class="griev-hero-inner">
+    <div class="griev-hero-grid">
+      <div>
+        <div class="griev-hero-badge">
+          <i class="fa-solid fa-shield-cat"></i> Worker Protection &amp; Ethics
+        </div>
+        <h1 class="griev-hero-title">
+          100% Confidential Grievance &amp; <br>
+          <span style="color:var(--blue);background:linear-gradient(135deg, var(--blue), var(--red));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Complaint Redressal System</span>
+        </h1>
+        <p class="griev-hero-desc">
+          As part of our zero-cost Ethical Recruitment commitment, Catharsis International is dedicated to protecting candidate and deployed worker rights. Submit your concerns with 100% anonymity and strict privacy.
+        </p>
+        <p class="crumb" style="margin-bottom:0">
+          <a href="index.html">Home</a> / <span>Grievance &amp; Feedback</span>
+        </p>
+      </div>
+
+      <!-- Quick Stats Showcase Card -->
+      <div class="griev-hero-stats">
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-user-shield"></i>
+          <div>
+            <b>100% Anonymous Option</b>
+            <span>Identity Protected</span>
+          </div>
+        </div>
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-lock"></i>
+          <div>
+            <b>SSL Encrypted Intake</b>
+            <span>Direct Compliance Cell</span>
+          </div>
+        </div>
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <div>
+            <b>24h Triage SLA</b>
+            <span>Immediate Response</span>
+          </div>
+        </div>
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <b>ISO 9001:2015 Audited</b>
+            <span>RBA Code Compliant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BILINGUAL COMMITMENT STRIP SECTION -->
+<section class="section" style="padding-bottom:0">
+  <div class="wrap" style="max-width:1320px">
+    <div class="bilingual-grid">
+      <!-- BANGLA CARD -->
+      <div class="bilingual-card card-bn reveal">
+        <div class="bilingual-head">
+          <div class="bilingual-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+          <div>
+            <h3>নৈতিক নিয়োগ ও সেবার মানোন্নয়ন</h3>
+            <span>Ethical Recruitment &amp; Service Feedback</span>
+          </div>
+        </div>
+        <p>Ethical Recruitment-এর প্রতিশ্রুতির অংশ হিসেবে সংশ্লিষ্ট সকলকে এবং বিশেষ করে আবেদনকারী কর্মীদের কাছ থেকে তাদের মতামত জানতে চাই, যাতে আমাদের সেবার মান আরো উন্নত করতে পারি। নিয়োগকালীন সময়ে এবং কাজে যোগদানের পরও আপনার কোনো সমস্যা দেখা দিলে তা সমাধানের জন্য আমরা আপনাকে সর্বপ্রকার সহযোগিতা করব।</p>
+      </div>
+
+      <!-- ENGLISH CARD -->
+      <div class="bilingual-card card-en reveal" data-d="1">
+        <div class="bilingual-head">
+          <div class="bilingual-icon"><i class="fa-solid fa-shield-heart"></i></div>
+          <div>
+            <h3>Worker Welfare &amp; Protection</h3>
+            <span>100% Private &amp; Confidential Resolution</span>
+          </div>
+        </div>
+        <p>We are here to assist you should you face any problem during recruitment and even after deployment overseas. You shall remain completely anonymous if preferred, and we will keep all information provided strictly private and confidential under ISO 9001:2015 guidelines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN FORM & DIRECT CHANNELS SECTION -->
+<section class="section">
+  <div class="wrap" style="max-width:1320px">
+    
+    <div class="grievance-main-grid">
+      
+      <!-- LEFT COLUMN: DIRECT CONTACT CARDS & GUIDELINES -->
+      <div style="display:flex;flex-direction:column;gap:24px">
+        
+        <!-- DIRECT CHANNELS CARD -->
+        <div class="info-channel-card reveal">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span class="proc-filter-btn active" style="font-size:11.5px;padding:4px 12px"><i class="fa-solid fa-bullhorn"></i> Response Desk</span>
+          </div>
+          <h3 style="font-family:var(--display);font-size:22px;color:#001B48;margin:0">Direct Grievance Channels</h3>
+          <p style="font-size:14px;color:#475569;line-height:1.6;margin:0">আপনার সমস্যা বা অভিযোগ সরাসরি ইমেইল, টেলিফোন বা ফেসবুক পেজের মাধ্যমে আমাদের জানান:</p>
+
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:4px">
+            <!-- Email -->
+            <div class="channel-row">
+              <div class="channel-icon" style="background:rgba(227,27,35,0.1);color:var(--red)"><i class="fa-solid fa-envelope-open-text"></i></div>
+              <div>
+                <b style="font-size:13.5px;color:#001B48">Grievance Dedicated Email</b>
+                <a href="mailto:catharsis.grievances@gmail.com" style="color:var(--red);font-weight:700;font-size:14.5px;text-decoration:none;display:block;margin-top:2px">catharsis.grievances@gmail.com</a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="channel-row">
+              <div class="channel-icon" style="background:rgba(0,48,135,0.08);color:var(--blue)"><i class="fa-solid fa-headset"></i></div>
+              <div>
+                <b style="font-size:13.5px;color:#001B48">Helpline &amp; Support Phone</b>
+                <a href="tel:+8809612008815" style="color:var(--blue-deep);font-weight:700;font-size:14.5px;text-decoration:none;display:block;margin-top:2px">+880 9612 008815 / 8811</a>
+              </div>
+            </div>
+
+            <!-- Facebook -->
+            <div class="channel-row">
+              <div class="channel-icon" style="background:rgba(24,119,242,0.1);color:#1877F2"><i class="fa-brands fa-facebook-f"></i></div>
+              <div>
+                <b style="font-size:13.5px;color:#001B48">Official Facebook Support Page</b>
+                <a href="https://www.facebook.com/catharsismanpower" target="_blank" rel="noopener" style="color:#1877F2;font-weight:700;font-size:14px;text-decoration:none;display:block;margin-top:2px">facebook.com/catharsismanpower</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INCIDENT GUIDELINES CARD -->
+        <div class="guidelines-box reveal" data-d="1">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+            <i class="fa-solid fa-list-check" style="color:var(--blue);font-size:20px"></i>
+            <h4 style="font-family:var(--display);font-size:18px;color:#001B48;margin:0">অভিযোগে যা উল্লেখ করবেন / Submission Details</h4>
+          </div>
+          <ul>
+            <li>ঘটনার তারিখ, সময় এবং ঘটনার নির্দিষ্ট স্থান</li>
+            <li>ঘটনার সাথে সংশ্লিষ্ট ব্যক্তির নাম বা পদবি</li>
+            <li>ঘটনার একটি সংক্ষিপ্ত ও স্পষ্ট বিবরণ</li>
+            <li>যোগাযোগের বিকল্প ইমেইল বা ফোন নম্বর</li>
+            <li>আমাদের টিম কখন আপনার সাথে যোগাযোগ করবে তার সুবিধাজনক সময়</li>
+          </ul>
+        </div>
+
+        <!-- CONFIDENTIALITY BADGE CARD -->
+        <div class="anonymity-card reveal" data-d="2">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+            <span style="width:40px;height:40px;background:rgba(255,255,255,0.15);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-size:18px"><i class="fa-solid fa-user-lock"></i></span>
+            <b style="font-size:17px;color:#FFF">গোপনীয়তার নিশ্চয়তা / Anonymity Guarantee</b>
+          </div>
+          <p style="font-size:14px;color:rgba(255,255,255,0.85);line-height:1.65;margin:0">আপনার নাম প্রকাশ করা হবে না এবং আপনার দেওয়া সমস্ত তথ্য ব্যক্তিগত ও গোপনীয় রাখা হবে। You shall remain completely anonymous and protected under ISO 9001:2015 standards.</p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: LUXURY COMPLAINT INTAKE FORM -->
+      <div class="grievance-form-card reveal">
+        
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:28px">
+          <div>
+            <span class="sec-hero-badge" style="margin-bottom:10px;font-size:12px;padding:5px 14px;display:inline-flex"><i class="fa-solid fa-file-pen"></i> Online Intake</span>
+            <h2 style="font-family:var(--display);font-size:25px;color:#001B48;margin:6px 0 0 0">Grievance Submission Form</h2>
+          </div>
+          <span style="font-size:11.5px;font-family:var(--accent);font-weight:700;color:var(--blue);background:rgba(0,48,135,0.08);padding:5px 14px;border-radius:999px"><i class="fa-solid fa-lock"></i> SSL Encrypted</span>
+        </div>
+
+        <form id="grievanceForm" onsubmit="event.preventDefault(); alert('ধন্যবাদ! আপনার অভিযোগটি সফলভাবে জমা হয়েছে। আমাদের নিবেদিত গ্রিভেন্স টিম অতিসত্বর এটি পর্যালোচনা করবে।\nThank you! Your grievance has been submitted securely.'); this.reset();">
+          
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+            <div class="field">
+              <label for="g_name"><i class="fa-solid fa-user" style="color:var(--blue)"></i> Full Name / নাম <span style="font-weight:normal;color:var(--slate);font-size:11.5px">(Optional)</span></label>
+              <input type="text" id="g_name" placeholder="Leave blank for 100% anonymity">
+            </div>
+
+            <div class="field">
+              <label for="g_phone"><i class="fa-solid fa-phone" style="color:var(--blue)"></i> Contact Phone / নম্বর *</label>
+              <input type="tel" id="g_phone" required placeholder="+8801XXXXXXXXX">
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px">
+            <div class="field">
+              <label for="g_email"><i class="fa-solid fa-envelope" style="color:var(--blue)"></i> Email / ইমেইল</label>
+              <input type="email" id="g_email" placeholder="name@example.com">
+            </div>
+
+            <div class="field">
+              <label for="g_country"><i class="fa-solid fa-earth-americas" style="color:var(--blue)"></i> Location / দেশ *</label>
+              <select id="g_country" required>
+                <option value="">Select Country</option>
+                <option value="Bangladesh">Bangladesh (In Recruitment Stage)</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Saudi Arabia">Saudi Arabia (KSA)</option>
+                <option value="UAE">United Arab Emirates (UAE)</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Other">Other Country</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px">
+            <div class="field">
+              <label for="g_date"><i class="fa-solid fa-calendar-days" style="color:var(--blue)"></i> Incident Date / ঘটনার তারিখ</label>
+              <input type="text" id="g_date" placeholder="e.g. 15 Aug 2026, 10:00 AM">
+            </div>
+
+            <div class="field">
+              <label for="g_time"><i class="fa-solid fa-clock" style="color:var(--blue)"></i> Call-Back Time / যোগাযোগের সময়</label>
+              <input type="text" id="g_time" placeholder="e.g. 2:00 PM - 5:00 PM">
+            </div>
+          </div>
+
+          <div class="field" style="margin-top:18px">
+            <label for="g_person"><i class="fa-solid fa-user-gear" style="color:var(--blue)"></i> Persons Involved / সংশ্লিষ্ট ব্যক্তি</label>
+            <input type="text" id="g_person" placeholder="Name, designation or company of involved person(s)">
+          </div>
+
+          <div class="field" style="margin-top:18px">
+            <label for="g_details"><i class="fa-solid fa-comment-dots" style="color:var(--blue)"></i> Grievance Details / ঘটনার বিবরণ *</label>
+            <textarea id="g_details" rows="4" required placeholder="ঘটনার স্থান, কারণ এবং বিস্তারিত বিবরণ লিখুন / Describe exact date, location, incident details..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-hero-primary" style="width:100%;margin-top:22px;padding:14px 20px;font-size:15px;justify-content:center;border-radius:12px">
+            <span>Submit Grievance Safely / অভিযোগ জমা দিন</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+
+          <p style="font-size:12px;color:var(--slate);text-align:center;margin-top:12px;margin-bottom:0"><i class="fa-solid fa-shield-halved" style="color:var(--blue)"></i> Securely routed to Catharsis Ethical Compliance Cell.</p>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP-BY-STEP REDRESSAL PROTOCOL SECTION (2x2 GRID) -->
+<section class="section section--tint">
+  <div class="wrap" style="max-width:1320px">
+    
+    <div class="section-head center reveal" style="max-width:720px">
+      <p class="eyebrow eyebrow--center"><i class="fa-solid fa-diagram-project"></i> Redressal Protocol &amp; SLA</p>
+      <h2>How We Resolve Your Complaints</h2>
+      <p class="lede" style="margin-top:14px">Transparent, step-by-step grievance resolution framework guaranteeing zero retaliation, strict privacy, and official compliance under ISO 9001:2015.</p>
+    </div>
+
+    <!-- 2x2 GRID -->
+    <div class="redressal-grid-2x2">
+      
+      <!-- CARD 01 -->
+      <div class="redressal-card reveal" style="border-left: 5px solid var(--blue-deep);">
+        <div style="display:flex; align-items:flex-start; gap:20px;">
+          <div class="redressal-icon-wrap" style="background: rgba(0,48,135,0.08); color: var(--blue-deep); border: 1.5px solid rgba(0,48,135,0.2);">
+            <i class="fa-solid fa-inbox"></i>
+            <span class="redressal-step-badge">STEP 01</span>
+          </div>
+          <div style="flex:1;">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+              <h3 style="font-family:var(--display);font-size:19px; color:#001B48; margin:0;">1. Filing &amp; Encrypted Intake</h3>
+              <span class="redressal-time-tag"><i class="fa-solid fa-bolt" style="color:var(--gold)"></i> Immediate Intake</span>
+            </div>
+            <p style="font-size:14px; color:#475569; line-height:1.65; margin:0;">Grievances are submitted through our online portal, direct email, or hotline with optional 100% anonymity and end-to-end SSL encryption.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 02 -->
+      <div class="redressal-card reveal" data-d="1" style="border-left: 5px solid var(--red);">
+        <div style="display:flex; align-items:flex-start; gap:20px;">
+          <div class="redressal-icon-wrap" style="background: rgba(227,27,35,0.08); color: var(--red); border: 1.5px solid rgba(227,27,35,0.2);">
+            <i class="fa-solid fa-user-shield"></i>
+            <span class="redressal-step-badge" style="background: var(--red);">STEP 02</span>
+          </div>
+          <div style="flex:1;">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+              <h3 style="font-family:var(--display);font-size:19px; color:#001B48; margin:0;">2. Confidential Triage</h3>
+              <span class="redressal-time-tag"><i class="fa-solid fa-clock" style="color:var(--red)"></i> Within 24 Hours</span>
+            </div>
+            <p style="font-size:14px; color:#475569; line-height:1.65; margin:0;">Ethical Compliance Officers review incident facts, verify evidence, and assign priority severity triage in complete secrecy.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 03 -->
+      <div class="redressal-card reveal" data-d="2" style="border-left: 5px solid var(--gold);">
+        <div style="display:flex; align-items:flex-start; gap:20px;">
+          <div class="redressal-icon-wrap" style="background: rgba(201,151,0,0.1); color: var(--gold); border: 1.5px solid rgba(201,151,0,0.3);">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <span class="redressal-step-badge" style="background: var(--gold); color:#fff;">STEP 03</span>
+          </div>
+          <div style="flex:1;">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+              <h3 style="font-family:var(--display);font-size:19px; color:#001B48; margin:0;">3. Investigation &amp; Remediation</h3>
+              <span class="redressal-time-tag"><i class="fa-solid fa-calendar-day" style="color:var(--gold)"></i> 3 - 5 Working Days</span>
+            </div>
+            <p style="font-size:14px; color:#475569; line-height:1.65; margin:0;">Direct investigation with affected parties, employer dialogue, and enforcement of zero-cost corrective remedies.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 04 -->
+      <div class="redressal-card reveal" data-d="3" style="border-left: 5px solid #16a34a;">
+        <div style="display:flex; align-items:flex-start; gap:20px;">
+          <div class="redressal-icon-wrap" style="background: rgba(34,197,94,0.1); color: #16a34a; border: 1.5px solid rgba(34,197,94,0.3);">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="redressal-step-badge" style="background: #16a34a;">STEP 04</span>
+          </div>
+          <div style="flex:1;">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+              <h3 style="font-family:var(--display);font-size:19px; color:#001B48; margin:0;">4. Resolution &amp; Verification</h3>
+              <span class="redressal-time-tag"><i class="fa-solid fa-shield" style="color:#16a34a"></i> Final Settlement</span>
+            </div>
+            <p style="font-size:14px; color:#475569; line-height:1.65; margin:0;">Official resolution delivered to worker with zero retaliation confirmation and final satisfaction verification audit.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM COMPLIANCE STRIP -->
+    <div class="redressal-guarantee-strip reveal" style="margin-top:36px">
+      <div style="display:flex;align-items:center;gap:16px">
+        <i class="fa-solid fa-shield-halved" style="font-size:28px;color:var(--gold)"></i>
+        <div>
+          <b style="font-size:16.5px;color:#fff">Strict Zero-Retaliation Policy</b>
+          <p style="font-size:14px;color:rgba(255,255,255,0.85);margin:0">Complainants are legally protected against job loss, wage deductions, or any form of intimidation.</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <span class="topbar-tag" style="background:rgba(255,255,255,0.15);color:#fff">ISO 9001:2015 AUDITED</span>
+        <span class="topbar-tag" style="background:rgba(255,255,255,0.15);color:#fff">RBA CODE COMPLIANT</span>
+        <span class="topbar-tag" style="background:rgba(255,255,255,0.15);color:#fff">BAIRA MEMBER</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER COMPONENT -->
+<div id="footer-component"></div>
+
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

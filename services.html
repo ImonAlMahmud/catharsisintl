@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services — Catharsis International | In-House Training, Medical &amp; Travel</title>
+<meta name="description" content="Explore end-to-end recruitment services by Catharsis International — Training &amp; Testing Centre, Medical Centre Ltd, Travel Logistics &amp; Zero Cost Migration.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.catharsisintl.com/services.html">
+<meta property="og:title" content="Our Services — Catharsis International">
+<meta property="og:description" content="Training, medical screening and travel handled by our own group companies for maximum speed and quality.">
+<meta property="og:image" content="images/Logo.png">
+<meta property="og:url" content="https://www.catharsisintl.com/services.html">
+<link rel="icon" type="image/png" href="images/Logo.png">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/libs/fontawesome.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ============================================================
+   SERVICES PAGE — LUXURY REDESIGN STYLES
+   ============================================================ */
+
+/* Hero Section Styling */
+.srv-hero-wrap {
+  position: relative;
+  background: radial-gradient(ellipse at 80% 20%, #EBF2FF 0%, #F5F8FF 50%, #FFFFFF 100%);
+  padding-top: calc(38px + 76px + 40px);
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+.srv-hero-wrap::before {
+  content: ""; position: absolute; top: -10%; right: -5%; width: 50vw; height: 50vw; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,48,135,.07) 0%, rgba(200,16,46,.03) 50%, transparent 75%); filter: blur(70px); pointer-events: none;
+}
+.srv-hero-inner {
+  max-width: 1320px; margin: 0 auto; padding-inline: var(--pad); position: relative; z-index: 2;
+}
+.srv-hero-grid {
+  display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center;
+}
+@media (max-width: 900px) {
+  .srv-hero-grid { grid-template-columns: 1fr; }
+}
+.srv-hero-badge {
+  display: inline-flex; align-items: center; gap: 9px; padding: 7px 18px; border-radius: 999px;
+  background: rgba(0,48,135,.06); border: 1px solid rgba(0,48,135,.15); color: var(--blue-deep);
+  font-family: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 20px;
+}
+.srv-hero-badge i { color: var(--red) }
+.srv-hero-title {
+  font-family: var(--display); font-size: clamp(32px, 4vw, 50px); font-weight: 800; color: #001B48;
+  line-height: 1.15; letter-spacing: -.03em; margin-bottom: 18px;
+}
+.srv-hero-desc {
+  color: #475569; font-size: 15.5px; line-height: 1.65; max-width: 58ch; margin-bottom: 28px;
+}
+.srv-hero-stats {
+  display: flex; flex-wrap: wrap; gap: 16px; padding-top: 24px; border-top: 1px solid rgba(0,48,135,.1);
+}
+.hero-stat-pill {
+  display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 14px;
+  background: #FFFFFF; border: 1px solid rgba(0,48,135,.1); box-shadow: 0 4px 16px rgba(0,48,135,.04);
+}
+.hero-stat-pill i { color: var(--blue); font-size: 16px }
+.hero-stat-pill div { display: flex; flex-direction: column }
+.hero-stat-pill b { font-family: var(--accent); font-size: 13.5px; color: #001B48; font-weight: 700 }
+.hero-stat-pill span { font-size: 11px; color: var(--slate) }
+
+/* Sister Concerns Grid */
+.sister-concerns-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px;
+}
+@media (max-width: 992px) {
+  .sister-concerns-grid { grid-template-columns: 1fr; }
+}
+
+.sister-card {
+  background: #FFFFFF; border: 1.5px solid rgba(0,48,135,0.12); border-radius: 24px; padding: 32px;
+  box-shadow: 0 10px 30px rgba(0,48,135,0.04); transition: all .35s var(--ease);
+  display: flex; flex-direction: column; justify-content: space-between; height: 100%; position: relative; overflow: hidden;
+}
+.sister-card:hover {
+  transform: translateY(-6px); border-color: var(--blue); box-shadow: 0 20px 45px rgba(0,48,135,0.12);
+}
+.sister-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px }
+.sister-badge {
+  font-size: 12px; font-family: var(--accent); font-weight: 700; color: var(--blue); background: rgba(0,48,135,0.08); padding: 4px 12px; border-radius: 999px;
+}
+.sister-logo-wrap {
+  width: 56px; height: 56px; border-radius: 16px; border: 1px solid rgba(0,48,135,0.12); overflow: hidden; display: grid; place-items: center; background: #FFF; box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+.sister-logo-wrap img { width: 100%; height: 100%; object-fit: contain }
+
+.sister-card h3 { font-family: var(--display); font-size: 22px; color: #001B48; margin: 0 0 8px 0; line-height: 1.25 }
+.sister-tag { font-size: 13px; color: var(--red); font-weight: 600; display: block; margin-bottom: 14px }
+.sister-card p { font-size: 14.5px; color: #475569; line-height: 1.65; margin-bottom: 20px }
+
+.sister-features-list { padding-left: 0; list-style: none; margin: 0 0 24px 0; display: flex; flex-direction: column; gap: 8px }
+.sister-features-list li { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #001B48; font-weight: 600 }
+.sister-features-list li i { color: var(--blue); font-size: 14px }
+
+.sister-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px 18px; border-radius: 12px;
+  background: rgba(0,48,135,0.06); color: var(--blue-deep); font-family: var(--accent); font-size: 14px; font-weight: 700; text-decoration: none;
+  transition: all .25s var(--ease);
+}
+.sister-btn:hover { background: var(--blue); color: #FFF; transform: translateY(-2px) }
+
+/* Ecosystem Feature Cards Grid */
+.ecosystem-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px;
+}
+@media (max-width: 900px) {
+  .ecosystem-grid { grid-template-columns: 1fr; }
+}
+.eco-card {
+  background: #FFFFFF; border: 1.5px solid rgba(0,48,135,0.1); border-radius: 20px; padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,48,135,0.04); transition: all .3s var(--ease);
+}
+.eco-card:hover {
+  transform: translateY(-4px); border-color: var(--blue); box-shadow: 0 14px 35px rgba(0,48,135,0.08);
+}
+.eco-icon {
+  width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; font-size: 20px;
+  background: rgba(0,48,135,0.08); color: var(--blue-deep); margin-bottom: 16px;
+}
+.eco-card h4 { font-family: var(--display); font-size: 18px; color: #001B48; margin: 0 0 8px 0 }
+.eco-card p { font-size: 13.5px; color: #475569; line-height: 1.6; margin: 0 }
+
+/* Advantage Banner */
+.advantage-banner {
+  background: linear-gradient(135deg, #001B48 0%, #003087 100%); border-radius: 24px; padding: 32px 40px;
+  color: #FFFFFF; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;
+  box-shadow: 0 16px 45px rgba(0,27,72,0.2); margin-top: 48px;
+}
+.advantage-banner h3 { font-family: var(--display); font-size: 24px; color: #FFFFFF; margin: 0 0 6px 0 }
+.advantage-banner p { font-size: 14.5px; color: rgba(255,255,255,0.85); margin: 0; max-width: 60ch }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="cursor"></div><div id="cursor-ring"></div>
+
+<!-- HEADER COMPONENT -->
+<div id="header-component"></div>
+
+<main>
+
+<!-- LUXURY PAGE HERO REDESIGN -->
+<section class="srv-hero-wrap">
+  <div class="srv-hero-inner">
+    <div class="srv-hero-grid">
+      <div>
+        <div class="srv-hero-badge">
+          <i class="fa-solid fa-screwdriver-wrench"></i> End-to-End Infrastructure
+        </div>
+        <h1 class="srv-hero-title">
+          Integrated Recruitment &amp; <br>
+          <span style="color:var(--blue);background:linear-gradient(135deg, var(--blue), var(--red));-webkit-background-clip:text;-webkit-text-fill-color:transparent">In-House Sister Solutions</span>
+        </h1>
+        <p class="srv-hero-desc">
+          Training, medical screening, skill testing, and travel logistics handled by our own dedicated group companies — keeping deployment timelines short and standards uncompromising.
+        </p>
+        <p class="crumb" style="margin-bottom:0">
+          <a href="index.html">Home</a> / <span>Our Services</span>
+        </p>
+      </div>
+
+      <!-- Quick Hero Stats Grid -->
+      <div class="srv-hero-stats">
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <div>
+            <b>Training &amp; Testing</b>
+            <span>Catharsis Skill Center</span>
+          </div>
+        </div>
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <div>
+            <b>Medical Centre Ltd.</b>
+            <span>GCC Approved Diagnostics</span>
+          </div>
+        </div>
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-plane-departure"></i>
+          <div>
+            <b>Catharsis Travels Ltd.</b>
+            <span>IATA Licensed Logistics</span>
+          </div>
+        </div>
+        <div class="hero-stat-pill">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <b>100% In-House</b>
+            <span>Zero Third-Party Delays</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IN-HOUSE SISTER CONCERNS SHOWCASE -->
+<section class="section" id="capabilities">
+  <div class="wrap" style="max-width:1320px">
+    <div class="section-head center reveal">
+      <p class="eyebrow eyebrow--center"><i class="fa-solid fa-building-user"></i> In-House Group Concerns</p>
+      <h2>Integrated Group Solutions</h2>
+      <p class="lede" style="margin-top:10px">By managing the entire talent ecosystem under Catharsis Group, we eliminate third-party delays, guarantee quality control, and ensure seamless deployment.</p>
+    </div>
+    
+    <div class="sister-concerns-grid">
+      <!-- CONCERN 1: CATHARSIS TRAINING & TESTING CENTRE -->
+      <div class="sister-card reveal">
+        <div>
+          <div class="sister-card-top">
+            <span class="sister-badge"><i class="fa-solid fa-graduation-cap"></i> Skill &amp; Trade Center</span>
+            <div class="sister-logo-wrap"><img src="images/catharsis_training_centre_logo.jpg" alt="Catharsis Training &amp; Testing Centre" loading="lazy"></div>
+          </div>
+          <h3>Catharsis Training &amp; Testing Centre</h3>
+          <span class="sister-tag">www.catharsis.training</span>
+          <p>Government-approved specialized skill-building and trade testing facility. Delivers intensive pre-departure orientation, technical certifications, and job-ready practical training.</p>
+          
+          <ul class="sister-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> Practical Trade Workshops &amp; Test Bays</li>
+            <li><i class="fa-solid fa-circle-check"></i> Government Approved Certifications</li>
+            <li><i class="fa-solid fa-circle-check"></i> Pre-Departure Cultural Orientation</li>
+          </ul>
+        </div>
+        <div>
+          <a class="sister-btn" href="https://www.catharsis.training" target="_blank" rel="noopener">
+            <span>Visit Training Portal</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- CONCERN 2: CATHARSIS MEDICAL CENTRE LTD. -->
+      <div class="sister-card reveal" data-d="1">
+        <div>
+          <div class="sister-card-top">
+            <span class="sister-badge" style="color:var(--red);background:rgba(227,27,35,0.08)"><i class="fa-solid fa-heart-pulse"></i> Diagnostic &amp; Healthcare</span>
+            <div class="sister-logo-wrap"><img src="images/catharsis_medical_centre_ltd.jpg" alt="Catharsis Medical Centre Ltd." loading="lazy"></div>
+          </div>
+          <h3>Catharsis Medical Centre Ltd.</h3>
+          <span class="sister-tag">www.cmcl.ltd</span>
+          <p>Comprehensive healthcare laboratory providing GCC and embassy-compliant medical examinations, diagnostic screenings, and certified physical fitness verifications.</p>
+          
+          <ul class="sister-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> GCC Approved Medical Examinations</li>
+            <li><i class="fa-solid fa-circle-check"></i> ISO Accredited Lab Diagnostics</li>
+            <li><i class="fa-solid fa-circle-check"></i> Fast Fitness Certificate Verification</li>
+          </ul>
+        </div>
+        <div>
+          <a class="sister-btn" href="https://www.cmcl.ltd" target="_blank" rel="noopener">
+            <span>Book Screening Portal</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- CONCERN 3: CATHARSIS TRAVELS LTD. -->
+      <div class="sister-card reveal" data-d="2">
+        <div>
+          <div class="sister-card-top">
+            <span class="sister-badge" style="color:var(--gold);background:rgba(201,151,0,0.1)"><i class="fa-solid fa-plane-departure"></i> IATA Approved Agency</span>
+            <div class="sister-logo-wrap"><img src="images/catharsis_travels_ltd.jpg" alt="Catharsis Travels Ltd." loading="lazy"></div>
+          </div>
+          <h3>Catharsis Travels Ltd.</h3>
+          <span class="sister-tag">Ticketing &amp; Flight Logistics</span>
+          <p>Full-service IATA-licensed travel agency coordinating air tickets, visa stamping support, group flight chartering, and airport departure assistance for worker batches.</p>
+          
+          <ul class="sister-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> IATA Licensed Flight Chartering</li>
+            <li><i class="fa-solid fa-circle-check"></i> Group Ticketing &amp; Transit Assistance</li>
+            <li><i class="fa-solid fa-circle-check"></i> BMET Clearance &amp; Departure Escort</li>
+          </ul>
+        </div>
+        <div>
+          <a class="sister-btn" href="contact.html">
+            <span>Plan Travel Logistics</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 CORE SERVICE PILLARS ECOSYSTEM SECTION -->
+<section class="section section--tint">
+  <div class="wrap" style="max-width:1320px">
+    <div class="section-head center reveal">
+      <p class="eyebrow eyebrow--center"><i class="fa-solid fa-diagram-project"></i> Complete Deployment Spectrum</p>
+      <h2>6 Pillars of Our Recruitment Ecosystem</h2>
+      <p class="lede" style="margin-top:10px">End-to-end operational capabilities that guarantee 100% compliance from initial sourcing to post-arrival support.</p>
+    </div>
+
+    <div class="ecosystem-grid">
+      <!-- PILLAR 1 -->
+      <div class="eco-card reveal">
+        <div class="eco-icon"><i class="fa-solid fa-user-gear"></i></div>
+        <h4>1. Skill Assessment &amp; Trade Testing</h4>
+        <p>Rigorous practical evaluation of welders, electricians, plumbers, masons, and technicians in specialized trade testing bays.</p>
+      </div>
+
+      <!-- PILLAR 2 -->
+      <div class="eco-card reveal" data-d="1">
+        <div class="eco-icon" style="background:rgba(227,27,35,0.08);color:var(--red)"><i class="fa-solid fa-notes-medical"></i></div>
+        <h4>2. GCC Medical &amp; Health Screening</h4>
+        <p>Full diagnostic laboratory testing ensuring candidates meet strict physical and health requirements set by destination countries.</p>
+      </div>
+
+      <!-- PILLAR 3 -->
+      <div class="eco-card reveal" data-d="2">
+        <div class="eco-icon" style="background:rgba(201,151,0,0.1);color:var(--gold)"><i class="fa-solid fa-book-open-reader"></i></div>
+        <h4>3. Pre-Departure Orientation (PDOT)</h4>
+        <p>Comprehensive briefing on workplace ethics, cultural norms, safety guidelines, and employee rights before travel.</p>
+      </div>
+
+      <!-- PILLAR 4 -->
+      <div class="eco-card reveal">
+        <div class="eco-icon"><i class="fa-solid fa-passport"></i></div>
+        <h4>4. Visa Stamping &amp; Attestation</h4>
+        <p>Complete documentation management, embassy clearance, MOFA attestation, and BMET smart card processing.</p>
+      </div>
+
+      <!-- PILLAR 5 -->
+      <div class="eco-card reveal" data-d="1">
+        <div class="eco-icon" style="background:rgba(227,27,35,0.08);color:var(--red)"><i class="fa-solid fa-plane-circle-check"></i></div>
+        <h4>5. Group Flight &amp; Ticketing Logistics</h4>
+        <p>Coordination of batch flights, IATA ticket issuance, airport transfer support, and pre-flight briefing.</p>
+      </div>
+
+      <!-- PILLAR 6 -->
+      <div class="eco-card reveal" data-d="2">
+        <div class="eco-icon" style="background:rgba(34,197,94,0.1);color:#16a34a"><i class="fa-solid fa-shield-heart"></i></div>
+        <h4>6. Post-Arrival Welfare &amp; Support</h4>
+        <p>On-the-ground worker support, hotline access, zero-retaliation grievance resolution, and employer liaison.</p>
+      </div>
+    </div>
+
+    <!-- Group Advantage Banner -->
+    <div class="advantage-banner reveal">
+      <div>
+        <h3>The Catharsis Group Advantage</h3>
+        <p>By operating our own training facilities, medical labs, and travel agency, we eliminate third-party delays, guarantee ISO 9001:2015 quality control, and deliver 100% transparent timelines.</p>
+      </div>
+      <a class="btn btn-hero-primary" href="contact.html"><i class="fa-solid fa-paper-plane"></i> Partner With Us</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section" style="background:#FFFFFF; color:var(--ink); border-top:1px solid rgba(0,48,135,0.1);">
+  <div class="wrap center" style="max-width:1320px">
+    <div class="section-head center reveal" style="max-width:640px;margin-bottom:32px">
+      <p class="eyebrow eyebrow--center"><i class="fa-solid fa-handshake"></i> Need a custom service package?</p>
+      <h2>Talk to our recruitment team today</h2>
+      <p class="lede" style="margin-top:14px">Whether you require full-scale manpower sourcing, skill certification, or medical testing — we tailor our infrastructure to your demands.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center" class="reveal" data-d="1">
+      <a class="btn btn-hero-primary" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Services Team</a>
+      <a class="btn btn-hero-secondary" href="recruitment-process.html"><i class="fa-solid fa-list-check"></i> Explore Recruitment Process</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER COMPONENT -->
+<div id="footer-component"></div>
+
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
