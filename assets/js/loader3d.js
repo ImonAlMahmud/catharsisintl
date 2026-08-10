@@ -337,6 +337,15 @@
     var mainGroup = new THREE.Group(); scene.add(mainGroup);
     var modelGroup = new THREE.Group(); mainGroup.add(modelGroup);
 
+    /* Instant 0ms Procedural 3D Catharsis Emblem Placeholder (Appears at 0% / Frame 1) */
+    var tempRingGeo = new THREE.TorusGeometry(1.25, 0.26, 16, 40);
+    var tempMatNavy = new THREE.MeshStandardMaterial({ color: 0x003087, roughness: 0.2, metalness: 0.8 });
+    var tempMesh = new THREE.Mesh(tempRingGeo, tempMatNavy);
+    modelGroup.add(tempMesh);
+
+    // Initial render call on Frame 1 (0ms) so 3D is immediately visible
+    renderer.render(scene, camera);
+
     if (typeof THREE.GLTFLoader !== 'undefined') {
       var loader = new THREE.GLTFLoader();
       loader.load(modelPath, function(gltf) {
@@ -349,12 +358,26 @@
         var c2 = box.getCenter(new THREE.Vector3());
         model.position.set(-c2.x * sz, -c2.y * sz, -c2.z * sz);
 
+        // Remove placeholder and insert loaded GLTF 3D model
+        modelGroup.remove(tempMesh);
+        if (tempRingGeo) tempRingGeo.dispose();
+        if (tempMatNavy) tempMatNavy.dispose();
+
         modelGroup.add(model);
 
-        // Render 1st frame immediately and trigger load completion for loader
+        // Render immediately upon GLTF ready
         renderer.render(scene, camera);
         onLoaderModelReady();
-      }, undefined, function(err) {
+      }, function(xhr) {
+        if (xhr.lengthComputable && xhr.total > 0) {
+          var realPercent = Math.min(88, Math.round((xhr.loaded / xhr.total) * 88));
+          if (realPercent > percent) {
+            percent = realPercent;
+            if (barFill) barFill.style.width = percent + '%';
+            if (percentEl) percentEl.textContent = percent + '%';
+          }
+        }
+      }, function(err) {
         console.warn('3D Loader GLB note:', err);
         onLoaderModelReady();
       });
