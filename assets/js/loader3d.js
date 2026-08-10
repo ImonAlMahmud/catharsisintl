@@ -233,17 +233,19 @@
   var percent = 0;
   var modelLoaded = false;
   var pageLoaded = false;
+  var isDone = false;
+  var animFrameId = null;
   var barFill = document.getElementById('loader-bar-fill');
   var percentEl = document.getElementById('loader-percent');
 
   var initialInterval = setInterval(function() {
-    if (!modelLoaded && percent < 45) {
-      percent += Math.floor(Math.random() * 8) + 4;
-      if (percent > 45) percent = 45;
+    if (!modelLoaded && percent < 75) {
+      percent += 12;
+      if (percent > 75) percent = 75;
       if (barFill) barFill.style.width = percent + '%';
       if (percentEl) percentEl.textContent = percent + '%';
     }
-  }, 35);
+  }, 16);
 
   function onModelLoaded() {
     if (modelLoaded) return;
@@ -252,28 +254,32 @@
 
     var showcaseInterval = setInterval(function() {
       if (percent < 100) {
-        percent += 4;
+        percent += 15;
         if (percent > 100) percent = 100;
         if (barFill) barFill.style.width = percent + '%';
         if (percentEl) percentEl.textContent = percent + '%';
       }
 
-      if (percent >= 100 && pageLoaded) {
+      if (percent >= 100) {
         clearInterval(showcaseInterval);
         finishAndHide3D();
       }
-    }, 25);
+    }, 12);
   }
 
   function finishAndHide3D() {
+    if (isDone) return;
+    isDone = true;
     if (barFill) barFill.style.width = '100%';
     if (percentEl) percentEl.textContent = '100%';
+    
     setTimeout(function() {
       loaderDiv.classList.add('loader-done');
+      if (animFrameId) cancelAnimationFrame(animFrameId);
       setTimeout(function() {
         if (loaderDiv && loaderDiv.parentNode) loaderDiv.parentNode.removeChild(loaderDiv);
-      }, 450);
-    }, 200);
+      }, 350);
+    }, 80);
   }
 
   if (document.readyState === 'complete') {
@@ -284,11 +290,10 @@
     });
   }
 
-  /* Fallback Maximum Timeout */
+  /* Ultra-Fast Fallback Maximum Timeout (Max 1.2s guarantee) */
   setTimeout(function() {
     if (!modelLoaded) onModelLoaded();
-    pageLoaded = true;
-  }, 3000);
+  }, 1200);
 
   /* Render Individual 3D Model using Three.js */
   function render3DModelWhite() {
@@ -303,8 +308,14 @@
     camera.position.set(0, 0.2, 7.0);
     camera.lookAt(0, 0, 0);
 
-    var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false, powerPreference: 'high-performance' });
-    renderer.setPixelRatio(1);
+    var renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      alpha: true,
+      antialias: false,
+      precision: 'mediump',
+      powerPreference: 'high-performance'
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
     renderer.setSize(88, 88, false);
 
     /* Studio Bright Lights for White Background */
@@ -343,12 +354,13 @@
 
     var time = 0;
     function animate() {
-      time += 0.038;
-      modelGroup.rotation.y += 0.032;
-      modelGroup.position.y = Math.sin(time * 2.5) * 0.12;
+      if (isDone) return;
+      time += 0.045;
+      modelGroup.rotation.y += 0.042;
+      modelGroup.position.y = Math.sin(time * 3.0) * 0.12;
 
       renderer.render(scene, camera);
-      requestAnimationFrame(animate);
+      animFrameId = requestAnimationFrame(animate);
     }
     animate();
   }
