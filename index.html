@@ -792,9 +792,14 @@
       });
 
       modelGroup.add(model);
+      renderer.render(scene, camera);
+      if (window.notifyHero3DLoaded) window.notifyHero3DLoaded();
     }, undefined, function(err) {
       console.warn('GLB load error:', err);
+      if (window.notifyHero3DLoaded) window.notifyHero3DLoaded();
     });
+  } else {
+    if (window.notifyHero3DLoaded) window.notifyHero3DLoaded();
   }
 
   /* Mouse Parallax */

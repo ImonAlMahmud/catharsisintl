@@ -231,30 +231,45 @@
 
   /* HOME PAGE INDIVIDUAL 3D LOGO LOADER LOGIC */
   var percent = 0;
-  var modelLoaded = false;
-  var pageLoaded = false;
+  var loader3dLoaded = false;
+  var hero3DLoaded = false;
   var isDone = false;
   var animFrameId = null;
   var barFill = document.getElementById('loader-bar-fill');
   var percentEl = document.getElementById('loader-percent');
 
+  // Listen for Index Hero 3D Model load signal
+  window.notifyHero3DLoaded = function() {
+    hero3DLoaded = true;
+    checkBoth3DReady();
+  };
+
   var initialInterval = setInterval(function() {
-    if (!modelLoaded && percent < 75) {
-      percent += 12;
-      if (percent > 75) percent = 75;
+    if (!isDone && percent < 85) {
+      percent += 2;
+      if (percent > 85) percent = 85;
       if (barFill) barFill.style.width = percent + '%';
       if (percentEl) percentEl.textContent = percent + '%';
     }
-  }, 16);
+  }, 30);
 
-  function onModelLoaded() {
-    if (modelLoaded) return;
-    modelLoaded = true;
+  function onLoaderModelReady() {
+    loader3dLoaded = true;
+    checkBoth3DReady();
+  }
+
+  function checkBoth3DReady() {
+    if (loader3dLoaded && hero3DLoaded && !isDone) {
+      onAll3DReady();
+    }
+  }
+
+  function onAll3DReady() {
     clearInterval(initialInterval);
 
     var showcaseInterval = setInterval(function() {
       if (percent < 100) {
-        percent += 15;
+        percent += 5;
         if (percent > 100) percent = 100;
         if (barFill) barFill.style.width = percent + '%';
         if (percentEl) percentEl.textContent = percent + '%';
@@ -264,7 +279,7 @@
         clearInterval(showcaseInterval);
         finishAndHide3D();
       }
-    }, 12);
+    }, 15);
   }
 
   function finishAndHide3D() {
@@ -278,28 +293,24 @@
       if (animFrameId) cancelAnimationFrame(animFrameId);
       setTimeout(function() {
         if (loaderDiv && loaderDiv.parentNode) loaderDiv.parentNode.removeChild(loaderDiv);
-      }, 350);
-    }, 80);
+      }, 450);
+    }, 120);
   }
 
-  if (document.readyState === 'complete') {
-    pageLoaded = true;
-  } else {
-    window.addEventListener('load', function() {
-      pageLoaded = true;
-    });
-  }
-
-  /* Ultra-Fast Fallback Maximum Timeout (Max 1.2s guarantee) */
+  /* Safety Fallback Maximum Timeout (Max 6s) */
   setTimeout(function() {
-    if (!modelLoaded) onModelLoaded();
-  }, 1200);
+    if (!isDone) {
+      loader3dLoaded = true;
+      hero3DLoaded = true;
+      checkBoth3DReady();
+    }
+  }, 6000);
 
-  /* Render Individual 3D Model using Three.js */
+  /* Render Individual 3D Model inside Loader Canvas using Three.js */
   function render3DModelWhite() {
     var canvas = document.getElementById('catharsis-loader-canvas');
     if (!canvas || typeof THREE === 'undefined') {
-      onModelLoaded();
+      onLoaderModelReady();
       return;
     }
 
@@ -311,11 +322,10 @@
     var renderer = new THREE.WebGLRenderer({
       canvas: canvas,
       alpha: true,
-      antialias: false,
-      precision: 'mediump',
+      antialias: true,
       powerPreference: 'high-performance'
     });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     renderer.setSize(88, 88, false);
 
     /* Studio Bright Lights for White Background */
@@ -341,23 +351,23 @@
 
         modelGroup.add(model);
 
-        // Render 1st frame immediately and trigger load completion
+        // Render 1st frame immediately and trigger load completion for loader
         renderer.render(scene, camera);
-        onModelLoaded();
+        onLoaderModelReady();
       }, undefined, function(err) {
         console.warn('3D Loader GLB note:', err);
-        onModelLoaded();
+        onLoaderModelReady();
       });
     } else {
-      onModelLoaded();
+      onLoaderModelReady();
     }
 
     var time = 0;
     function animate() {
       if (isDone) return;
-      time += 0.045;
-      modelGroup.rotation.y += 0.042;
-      modelGroup.position.y = Math.sin(time * 3.0) * 0.12;
+      time += 0.038;
+      modelGroup.rotation.y += 0.035;
+      modelGroup.position.y = Math.sin(time * 2.5) * 0.12;
 
       renderer.render(scene, camera);
       animFrameId = requestAnimationFrame(animate);
