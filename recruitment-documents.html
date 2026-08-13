@@ -75,6 +75,7 @@
   padding: 8px 18px; border-radius: 999px; border: 1px solid rgba(0,48,135,.15);
   background: rgba(255,255,255,.8); color: var(--blue-deep); font-family: var(--accent);
   font-size: 13.5px; font-weight: 600; cursor: pointer; transition: all .25s var(--ease);
+  display: inline-flex; align-items: center; gap: 8px;
 }
 .docs-filter-btn:hover, .docs-filter-btn.active {
   background: var(--blue); color: #FFFFFF; border-color: var(--blue); box-shadow: 0 4px 14px rgba(0,48,135,.25);
@@ -290,10 +291,10 @@
     <div class="docs-toolbar-card reveal">
       <div class="docs-filter-group" id="doc-filters">
         <button class="docs-filter-btn active" data-country="all">All Countries</button>
-        <button class="docs-filter-btn" data-country="malaysia">🇲🇾 Malaysia</button>
-        <button class="docs-filter-btn" data-country="saudi">🇸🇦 Saudi Arabia</button>
-        <button class="docs-filter-btn" data-country="uae">🇦🇪 United Arab Emirates</button>
-        <button class="docs-filter-btn" data-country="qatar">🇶🇦 Qatar</button>
+        <button class="docs-filter-btn" data-country="malaysia"><span class="country-flag"><img src="images/Malaysia_flag.webp" alt="Malaysia flag"></span> Malaysia</button>
+        <button class="docs-filter-btn" data-country="saudi"><span class="country-flag"><img src="images/ksa_flags.webp" alt="Saudi Arabia flag"></span> Saudi Arabia</button>
+        <button class="docs-filter-btn" data-country="uae"><span class="country-flag"><img src="images/uae_flags.webp" alt="UAE flag"></span> United Arab Emirates</button>
+        <button class="docs-filter-btn" data-country="qatar"><span class="country-flag"><img src="images/Qatar_flags.webp" alt="Qatar flag"></span> Qatar</button>
       </div>
       
       <div class="docs-search-box">

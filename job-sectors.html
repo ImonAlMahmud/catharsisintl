@@ -146,24 +146,44 @@
   display: flex; align-items: center; justify-content: space-between;
 }
 
-/* Country Flag Grid */
-.country-pill-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 36px;
+/* Country Flag Infinite Marquee */
+.country-marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin-top: 36px;
+  padding-block: 10px;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
+}
+.country-marquee-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+.country-marquee-track:hover {
+  animation-play-state: paused;
 }
 .country-pill-card {
-  background: #FFFFFF; border: 1px solid rgba(0,48,135,.1); border-radius: 18px; padding: 14px 18px;
+  background: #FFFFFF; border: 1px solid rgba(0,48,135,.1); border-radius: 18px; padding: 14px 22px;
   display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 14px rgba(0,48,135,.04);
-  transition: all .28s var(--ease);
+  transition: all .28s var(--ease); flex: none; min-width: 210px;
 }
 .country-pill-card:hover {
-  transform: translateY(-3px); border-color: var(--blue); box-shadow: 0 10px 24px rgba(0,48,135,.1);
+  transform: translateY(-4px); border-color: var(--blue); box-shadow: 0 12px 28px rgba(0,48,135,.12);
 }
 .pill-flag-box {
   width: 42px; height: 42px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,48,135,.15); flex: none;
 }
 .pill-flag-box img { width: 100%; height: 100%; object-fit: cover }
-.country-pill-card b { font-family: var(--accent); font-size: 14px; color: #001B48; font-weight: 700; display: block }
-.country-pill-card span { font-size: 11.5px; color: var(--slate); display: block }
+.country-pill-card b { font-family: var(--accent); font-size: 14px; color: #001B48; font-weight: 700; display: block; white-space: nowrap }
+.country-pill-card span { font-size: 11.5px; color: var(--slate); display: block; white-space: nowrap }
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 10px)); }
+}
 
 /* CTA Banner */
 .sec-cta-banner {
@@ -465,85 +485,152 @@
       <p class="lede" style="margin-top:14px">Catharsis International maintains active government-cleared placement corridors across Asia, the Gulf, and Middle East.</p>
     </div>
 
-    <div class="country-pill-grid">
-      <!-- SAUDI ARABIA -->
-      <div class="country-pill-card reveal">
-        <div class="pill-flag-box"><img src="images/ksa_flags.webp" alt="Saudi Arabia flag" loading="lazy"></div>
-        <div>
-          <b>Saudi Arabia</b>
-          <span>Riyadh &amp; Jeddah</span>
+    <div class="country-marquee-wrapper">
+      <div class="country-marquee-track">
+        <!-- FIRST SET -->
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/ksa_flags.webp" alt="Saudi Arabia flag" loading="lazy"></div>
+          <div>
+            <b>Saudi Arabia</b>
+            <span>Riyadh &amp; Jeddah</span>
+          </div>
         </div>
-      </div>
 
-      <!-- MALAYSIA -->
-      <div class="country-pill-card reveal" data-d="1">
-        <div class="pill-flag-box"><img src="images/Malaysia_flag.webp" alt="Malaysia flag" loading="lazy"></div>
-        <div>
-          <b>Malaysia</b>
-          <span>Kuala Lumpur &amp; Johore</span>
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/Malaysia_flag.webp" alt="Malaysia flag" loading="lazy"></div>
+          <div>
+            <b>Malaysia</b>
+            <span>Kuala Lumpur &amp; Johore</span>
+          </div>
         </div>
-      </div>
 
-      <!-- QATAR -->
-      <div class="country-pill-card reveal" data-d="2">
-        <div class="pill-flag-box"><img src="images/Qatar_flags.webp" alt="Qatar flag" loading="lazy"></div>
-        <div>
-          <b>Qatar</b>
-          <span>Doha &amp; Energy Zone</span>
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/Qatar_flags.webp" alt="Qatar flag" loading="lazy"></div>
+          <div>
+            <b>Qatar</b>
+            <span>Doha &amp; Energy Zone</span>
+          </div>
         </div>
-      </div>
 
-      <!-- UAE -->
-      <div class="country-pill-card reveal" data-d="3">
-        <div class="pill-flag-box"><img src="images/uae_flags.webp" alt="UAE flag" loading="lazy"></div>
-        <div>
-          <b>United Arab Emirates</b>
-          <span>Dubai &amp; Abu Dhabi</span>
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/uae_flags.webp" alt="UAE flag" loading="lazy"></div>
+          <div>
+            <b>United Arab Emirates</b>
+            <span>Dubai &amp; Abu Dhabi</span>
+          </div>
         </div>
-      </div>
 
-      <!-- KUWAIT -->
-      <div class="country-pill-card reveal" data-d="4">
-        <div class="pill-flag-box"><img src="images/flag_kw.svg" alt="Kuwait flag" loading="lazy"></div>
-        <div>
-          <b>Kuwait</b>
-          <span>Kuwait City</span>
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/flag_kw.svg" alt="Kuwait flag" loading="lazy"></div>
+          <div>
+            <b>Kuwait</b>
+            <span>Kuwait City</span>
+          </div>
         </div>
-      </div>
 
-      <!-- OMAN -->
-      <div class="country-pill-card reveal">
-        <div class="pill-flag-box"><img src="images/flag_om.svg" alt="Oman flag" loading="lazy"></div>
-        <div>
-          <b>Oman</b>
-          <span>Muscat &amp; Sohar</span>
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/flag_om.svg" alt="Oman flag" loading="lazy"></div>
+          <div>
+            <b>Oman</b>
+            <span>Muscat &amp; Sohar</span>
+          </div>
         </div>
-      </div>
 
-      <!-- BAHRAIN -->
-      <div class="country-pill-card reveal" data-d="1">
-        <div class="pill-flag-box"><img src="images/flag_bh.svg" alt="Bahrain flag" loading="lazy"></div>
-        <div>
-          <b>Bahrain</b>
-          <span>Manama</span>
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/flag_bh.svg" alt="Bahrain flag" loading="lazy"></div>
+          <div>
+            <b>Bahrain</b>
+            <span>Manama</span>
+          </div>
         </div>
-      </div>
 
-      <!-- SINGAPORE -->
-      <div class="country-pill-card reveal" data-d="2">
-        <div class="pill-flag-box"><img src="images/flag_sg.svg" alt="Singapore flag" loading="lazy"></div>
-        <div>
-          <b>Singapore</b>
-          <span>Marine &amp; Process</span>
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/flag_sg.svg" alt="Singapore flag" loading="lazy"></div>
+          <div>
+            <b>Singapore</b>
+            <span>Marine &amp; Process</span>
+          </div>
         </div>
-      </div>
 
-      <!-- JAPAN -->
-      <div class="country-pill-card reveal" data-d="3">
-        <div class="pill-flag-box"><img src="images/flag_jp.svg" alt="Japan flag" loading="lazy"></div>
-        <div>
-          <b>Japan</b>
-          <span>TITP &amp; SSW Worker</span>
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/flag_jp.svg" alt="Japan flag" loading="lazy"></div>
+          <div>
+            <b>Japan</b>
+            <span>TITP &amp; SSW Worker</span>
+          </div>
+        </div>
+
+        <!-- DUPLICATE SET FOR INFINITE SEAMLESS LOOP -->
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/ksa_flags.webp" alt="Saudi Arabia flag" loading="lazy"></div>
+          <div>
+            <b>Saudi Arabia</b>
+            <span>Riyadh &amp; Jeddah</span>
+          </div>
+        </div>
+
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/Malaysia_flag.webp" alt="Malaysia flag" loading="lazy"></div>
+          <div>
+            <b>Malaysia</b>
+            <span>Kuala Lumpur &amp; Johore</span>
+          </div>
+        </div>
+
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/Qatar_flags.webp" alt="Qatar flag" loading="lazy"></div>
+          <div>
+            <b>Qatar</b>
+            <span>Doha &amp; Energy Zone</span>
+          </div>
+        </div>
+
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/uae_flags.webp" alt="UAE flag" loading="lazy"></div>
+          <div>
+            <b>United Arab Emirates</b>
+            <span>Dubai &amp; Abu Dhabi</span>
+          </div>
+        </div>
+
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/flag_kw.svg" alt="Kuwait flag" loading="lazy"></div>
+          <div>
+            <b>Kuwait</b>
+            <span>Kuwait City</span>
+          </div>
+        </div>
+
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/flag_om.svg" alt="Oman flag" loading="lazy"></div>
+          <div>
+            <b>Oman</b>
+            <span>Muscat &amp; Sohar</span>
+          </div>
+        </div>
+
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/flag_bh.svg" alt="Bahrain flag" loading="lazy"></div>
+          <div>
+            <b>Bahrain</b>
+            <span>Manama</span>
+          </div>
+        </div>
+
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/flag_sg.svg" alt="Singapore flag" loading="lazy"></div>
+          <div>
+            <b>Singapore</b>
+            <span>Marine &amp; Process</span>
+          </div>
+        </div>
+
+        <div class="country-pill-card">
+          <div class="pill-flag-box"><img src="images/flag_jp.svg" alt="Japan flag" loading="lazy"></div>
+          <div>
+            <b>Japan</b>
+            <span>TITP &amp; SSW Worker</span>
+          </div>
         </div>
       </div>
     </div>
