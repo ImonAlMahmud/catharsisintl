@@ -1,839 +1,1630 @@
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>About — Catharsis International | Founded 1997 | ISO 9001:2015 | BAIRA Member | Dhaka</title>
+
 <meta name="description" content="Learn about Catharsis International — a Dhaka-based recruiting agency founded in 1997. Government license RL.-549, ISO 9001:2015 certified, BAIRA member. Chairman Mohammed Ruhul Amin leads a team with IOM/UN and RBA certifications.">
+
 <meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://www.catharsisintl.com/about.html">
+
 <meta property="og:title" content="About Catharsis International — Recruiting with a Record You Can Check">
+
 <meta property="og:description" content="Founded 1997, ISO certified, BAIRA member. Chairman Mohammed Ruhul Amin is IOM &amp; RBA trained. Learn about our story, mission and leadership.">
+
 <meta property="og:image" content="images/Logo.webp">
+
 <meta property="og:url" content="https://www.catharsisintl.com/about.html">
+
 <link rel="icon" type="image/jpeg" href="images/favicon.webp">
+
 <link rel="stylesheet" href="assets/fonts/fonts.css">
+
 <link rel="stylesheet" href="assets/libs/fontawesome.min.css">
+
 <link rel="stylesheet" href="assets/css/style.css">
+
 <style>
+
 /* ============================================================
+
    ABOUT PAGE — LUXURY REDESIGN STYLES
+
    ============================================================ */
 
+
+
 /* Hero Section Styling */
+
 .about-hero-wrap {
+
   position: relative;
+
   background: radial-gradient(ellipse at 80% 20%, #EBF2FF 0%, #F5F8FF 50%, #FFFFFF 100%);
+
   padding-top: calc(76px + 40px);
+
   padding-bottom: 70px;
+
   overflow: hidden;
+
 }
+
 .about-hero-wrap::before {
+
   content: ""; position: absolute; top: -10%; right: -5%; width: 50vw; height: 50vw; border-radius: 50%;
+
   background: radial-gradient(circle, rgba(0,48,135,.07) 0%, rgba(200,16,46,.03) 50%, transparent 75%); filter: blur(70px); pointer-events: none;
+
 }
+
 .about-hero-inner {
+
   max-width: 1320px; margin: 0 auto; padding-inline: var(--pad); position: relative; z-index: 2;
+
 }
+
 .about-hero-grid {
+
   display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center;
+
 }
+
 @media (max-width: 900px) {
+
   .about-hero-grid { grid-template-columns: 1fr; }
+
 }
+
 .about-hero-badge {
+
   display: inline-flex; align-items: center; gap: 9px; padding: 7px 18px; border-radius: 999px;
+
   background: rgba(0,48,135,.06); border: 1px solid rgba(0,48,135,.15); color: var(--blue-deep);
+
   font-family: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 20px;
+
 }
+
 .about-hero-badge i { color: var(--red) }
+
 .about-hero-title {
+
   font-family: var(--display); font-size: clamp(32px, 4vw, 50px); font-weight: 800; color: #001B48;
+
   line-height: 1.15; letter-spacing: -.03em; margin-bottom: 18px;
+
 }
+
 .about-hero-desc {
+
   color: #475569; font-size: 15.5px; line-height: 1.65; max-width: 58ch; margin-bottom: 28px;
+
 }
+
 .about-hero-stats {
+
   display: flex; flex-wrap: wrap; gap: 16px; padding-top: 24px; border-top: 1px solid rgba(0,48,135,.1);
+
 }
+
 .hero-stat-pill {
+
   display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 14px;
+
   background: #FFFFFF; border: 1px solid rgba(0,48,135,.1); box-shadow: 0 4px 16px rgba(0,48,135,.04);
+
 }
+
 .hero-stat-pill i { color: var(--blue); font-size: 16px }
+
 .hero-stat-pill div { display: flex; flex-direction: column }
+
 .hero-stat-pill b { font-family: var(--accent); font-size: 13.5px; color: #001B48; font-weight: 700 }
+
 .hero-stat-pill span { font-size: 11px; color: var(--slate) }
 
+
+
 /* Mission & Vision Dedicated Grid */
+
 .mission-vision-dedicated-grid {
+
   display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 36px;
+
 }
+
 @media (max-width: 900px) {
+
   .mission-vision-dedicated-grid { grid-template-columns: 1fr; }
+
 }
+
 .mv-dedicated-card {
+
   background: #FFFFFF; border-radius: 24px; padding: 32px;
+
   box-shadow: 0 10px 30px rgba(0,48,135,0.05); border: 1.5px solid rgba(0,48,135,0.1);
+
   transition: all .35s var(--ease); display: flex; flex-direction: column; justify-content: space-between;
+
 }
+
 .mv-dedicated-card:hover {
+
   transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,48,135,0.1); border-color: var(--blue);
+
 }
+
 .mv-card-head { display: flex; align-items: center; gap: 16px; margin-bottom: 16px }
+
 .mv-dedicated-icon {
+
   width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; font-size: 22px; flex: none;
+
   background: rgba(0,48,135,0.08); color: var(--blue-deep); border: 1px solid rgba(0,48,135,0.15);
+
 }
+
 .mv-card-head h3 { font-family: var(--display); font-size: 22px; color: #001B48; margin: 0; line-height: 1.25 }
+
 .mv-card-head span { font-size: 13px; color: var(--slate); font-weight: 500; display: block; margin-top: 2px }
+
 .mv-dedicated-card p { font-size: 15px; color: #475569; line-height: 1.75; margin: 0 }
 
+
+
 /* Leadership & ISO Section */
+
 .leader-main-card {
+
   background: #FFFFFF; border: 1.5px solid rgba(0,48,135,0.12); border-radius: 28px; padding: 36px;
+
   box-shadow: 0 16px 45px rgba(0,48,135,0.06); display: grid; grid-template-columns: 320px 1fr; gap: 36px; align-items: center;
+
   margin-top: 36px;
+
 }
+
 @media (max-width: 900px) {
+
   .leader-main-card { grid-template-columns: 1fr; }
+
 }
+
 .leader-portrait-frame {
+
   position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,48,135,0.12);
+
 }
+
 .leader-portrait-frame img { width: 100%; height: 340px; object-fit: cover; display: block }
+
 .portrait-seal-chip {
+
   position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(0,27,72,0.85); backdrop-filter: blur(8px);
+
   color: #FFF; padding: 8px 14px; border-radius: 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600;
+
 }
+
 .portrait-seal-chip i { color: var(--gold) }
 
+
+
 .leader-header-pills { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px }
+
 .leader-role-tag {
+
   font-size: 12px; font-family: var(--accent); font-weight: 700; color: var(--blue-deep); background: rgba(0,48,135,0.08); padding: 4px 12px; border-radius: 999px;
+
 }
+
 .leader-exp-tag {
+
   font-size: 12px; font-family: var(--accent); font-weight: 700; color: var(--red); background: rgba(227,27,35,0.08); padding: 4px 12px; border-radius: 999px;
+
 }
+
 .leader-info-col h3 { font-family: var(--display); font-size: 28px; color: #001B48; margin: 0 0 4px 0 }
+
 .leader-designation { font-size: 14px; color: var(--blue); font-weight: 600; margin-bottom: 16px }
+
 .leader-bio-text { font-size: 15px; color: #475569; line-height: 1.7; margin-bottom: 20px }
+
 .leader-credentials-chips { display: flex; gap: 12px; flex-wrap: wrap }
+
 .cred-chip-item {
+
   display: flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid rgba(0,48,135,0.1); font-size: 13px; font-weight: 600; color: #001B48;
+
 }
+
 .cred-chip-item i { color: var(--gold) }
 
+
+
 /* ISO Showcase Card */
+
 .iso-large-showcase-card {
+
   background: #FFFFFF; border: 1.5px solid rgba(0,48,135,0.12); border-radius: 28px; padding: 36px;
+
   box-shadow: 0 16px 45px rgba(0,48,135,0.06); margin-top: 36px;
+
 }
+
 .iso-showcase-grid { display: grid; grid-template-columns: 360px 1fr; gap: 36px; align-items: center }
+
 @media (max-width: 900px) {
+
   .iso-showcase-grid { grid-template-columns: 1fr; }
+
 }
+
 .iso-cert-frame-large {
+
   position: relative; border-radius: 20px; overflow: hidden; border: 1px solid rgba(0,48,135,0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
 }
+
 .iso-cert-frame-large img { width: 100%; height: 320px; object-fit: cover; display: block }
+
 .iso-zoom-overlay {
+
   position: absolute; inset: 0; background: rgba(0,27,72,0.6); opacity: 0; display: grid; place-items: center; transition: all .3s var(--ease);
+
 }
+
 .iso-cert-frame-large:hover .iso-zoom-overlay { opacity: 1 }
+
 .iso-zoom-btn {
+
   color: #FFF; font-family: var(--accent); font-size: 13px; font-weight: 700; background: var(--blue); padding: 10px 18px; border-radius: 10px; text-decoration: none; display: flex; align-items: center; gap: 8px;
+
 }
+
 .iso-cert-badge-floating {
+
   position: absolute; bottom: 12px; left: 12px; background: #FFFFFF; padding: 8px 14px; border-radius: 12px; display: flex; align-items: center; gap: 10px; box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+
 }
+
 .iso-cert-badge-floating i { color: var(--gold); font-size: 20px }
+
 .iso-cert-badge-floating b { font-size: 13px; color: #001B48; display: block }
+
 .iso-cert-badge-floating span { font-size: 11px; color: var(--slate) }
 
+
+
 .iso-details-col h3 { font-family: var(--display); font-size: 26px; color: #001B48; margin: 10px 0 12px 0 }
+
 .iso-desc { font-size: 15px; color: #475569; line-height: 1.7; margin-bottom: 20px }
+
 .iso-audit-points-grid { display: grid; grid-template-columns: 1fr; gap: 14px }
+
 .iso-audit-item {
+
   display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; border-radius: 14px; background: #F8FAFC; border: 1px solid rgba(0,48,135,0.08);
+
 }
+
 .iso-audit-item i { color: var(--blue); font-size: 18px; margin-top: 2px }
+
 .iso-audit-item b { font-size: 14px; color: #001B48; display: block }
+
 .iso-audit-item span { font-size: 12.5px; color: var(--slate) }
 
+
+
 /* Organogram Tree Styling (Standard Seamless CSS Tree) */
+
 .about-organogram-redesign {
+
   background: #F8FAFC; padding-block: 60px; overflow: hidden;
+
 }
+
 .otree {
+
   width: 100%; overflow-x: auto; padding: 40px 20px; display: flex; justify-content: center;
+
 }
+
 .oi-root {
+
   display: flex; flex-direction: column; align-items: center; width: max-content;
+
 }
+
+
 
 .otree .oi {
+
   display: flex; flex-direction: column; align-items: center; position: relative;
+
 }
+
+
 
 /* Container for children sitting below parent node */
+
 .otree .oc {
+
   display: flex; position: relative; padding-top: 30px; margin-top: 0;
+
 }
+
+
 
 /* Parent vertical line down to horizontal bar */
+
 .otree .oi > .on + .oc::before {
+
   content: ''; position: absolute; top: 0; left: 50%; width: 2px; height: 30px;
+
   background: #003087; transform: translateX(-50%); z-index: 1; opacity: 0.85;
+
 }
+
+
 
 /* Red junction dot at parent line split */
+
 .otree .oi > .on + .oc::after {
+
   content: ''; position: absolute; top: 30px; left: 50%; width: 8px; height: 8px;
+
   background: #E31B23; border-radius: 50%; transform: translate(-50%, -50%); z-index: 4;
+
   box-shadow: 0 0 0 2px #F8FAFC;
+
 }
+
+
 
 /* Each child container inside .oc */
+
 .otree .oc > .oi {
+
   padding-top: 30px; padding-inline: 16px; position: relative;
+
 }
+
+
 
 /* Vertical line from horizontal bar down into child node */
+
 .otree .oc > .oi::before {
+
   content: ''; position: absolute; top: 0; left: 50%; width: 2px; height: 30px;
+
   background: #003087; transform: translateX(-50%); z-index: 1; opacity: 0.85;
+
 }
+
+
 
 /* Continuous horizontal bar across sibling nodes */
+
 .otree .oc > .oi::after {
+
   content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+
   background: #003087; z-index: 1; opacity: 0.85;
+
 }
+
 .otree .oc > .oi:first-child::after { left: 50%; width: 50%; }
+
 .otree .oc > .oi:last-child::after { left: 0; width: 50%; }
+
 .otree .oc > .oi:only-child::after { display: none; }
 
+
+
 /* Red junction dot at top of child stem */
+
 .otree .oc > .oi > .on::before {
+
   content: ''; position: absolute; top: -30px; left: 50%; width: 6px; height: 6px;
+
   background: #E31B23; border-radius: 50%; transform: translate(-50%, -50%); z-index: 4;
+
 }
+
 .otree .oi-root > .on::before { display: none; }
 
+
+
 /* Node Boxes */
+
 .otree .on {
+
   position: relative; z-index: 2; min-width: 175px; background: #FFFFFF;
+
   border: 1.5px solid rgba(0,48,135,0.14); border-radius: 16px; padding: 12px 18px;
+
   box-shadow: 0 8px 24px rgba(0,48,135,0.06); display: flex; align-items: center; gap: 12px; text-align: left;
+
   transition: all .3s var(--ease);
+
 }
+
 .otree .on:hover {
+
   transform: translateY(-3px); border-color: var(--blue); box-shadow: 0 12px 30px rgba(0,48,135,0.12);
+
 }
+
+
 
 /* Owner Node */
+
 .node-owner {
+
   background: linear-gradient(135deg, #001B48 0%, #003087 100%) !important;
+
   border-color: #001B48 !important; color: #FFFFFF !important;
+
   min-width: 220px !important; padding: 16px 24px !important; border-radius: 20px !important;
+
   box-shadow: 0 12px 32px rgba(0,27,72,0.25) !important;
+
 }
+
 .node-owner .node-icon-wrap {
+
   background: rgba(227,27,35,0.2) !important; color: #E31B23 !important;
+
 }
+
 .node-owner b { color: #FFFFFF !important; font-size: 15px !important; letter-spacing: 0.5px }
+
 .node-owner span { color: rgba(255,255,255,0.85) !important }
 
+
+
 /* Specific Node Icon Colors */
+
 .node-advisor .node-icon-wrap {
+
   background: rgba(227,27,35,0.1) !important; color: var(--red) !important;
+
 }
+
+
 
 .node-icon-wrap {
+
   width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; font-size: 16px;
+
   background: rgba(0,48,135,0.08); color: var(--blue); flex: none;
+
 }
+
 .node-label b { font-family: var(--accent); font-size: 13px; color: #001B48; display: block; line-height: 1.2 }
+
 .node-label span { font-size: 11px; color: var(--slate); font-weight: 500 }
+
 </style>
+
 </head>
+
 <body>
+
 <div id="progress"></div>
+
 <div id="cursor"></div><div id="cursor-ring"></div>
 
+
+
 <!-- HEADER COMPONENT -->
+
 <div id="header-component"></div>
+
+
 
 <main>
 
+
+
 <!-- LUXURY PAGE HERO REDESIGN -->
+
 <section class="about-hero-wrap">
+
   <div class="about-hero-inner">
+
     <div class="about-hero-grid">
+
       <div>
+
         <div class="about-hero-badge">
+
           <i class="fa-solid fa-compass"></i> Established 1997 · License RL-549
+
         </div>
+
         <h1 class="about-hero-title">
+
           Recruiting with a Record <br>
+
           <span style="color:var(--blue);background:linear-gradient(135deg, var(--blue), var(--red));-webkit-background-clip:text;-webkit-text-fill-color:transparent">You Can Check &amp; Trust</span>
+
         </h1>
+
         <p class="about-hero-desc">
+
           Founded in 1997 in Dhaka, Catharsis International places Bangladeshi workers with employers across Asia and the Gulf — under Govt. License RL.-549, ISO 9001:2015 certification and BAIRA membership.
+
         </p>
+
         <p class="crumb" style="margin-bottom:0">
+
           <a href="index.html">Home</a> / <span>About Catharsis</span>
+
         </p>
+
       </div>
+
+
 
       <!-- Hero Key Stats Grid -->
+
       <div class="about-hero-stats">
+
         <div class="hero-stat-pill">
+
           <i class="fa-solid fa-calendar-check"></i>
+
           <div>
+
             <b>27+ Years Legacy</b>
+
             <span>Established 1997</span>
+
           </div>
+
         </div>
+
         <div class="hero-stat-pill">
+
           <i class="fa-solid fa-file-contract"></i>
+
           <div>
+
             <b>RL-549 Licensed</b>
+
             <span>Govt. Approved Agency</span>
+
           </div>
+
         </div>
+
         <div class="hero-stat-pill">
+
           <i class="fa-solid fa-award"></i>
+
           <div>
+
             <b>ISO 9001:2015</b>
+
             <span>Certified Quality Management</span>
+
           </div>
+
         </div>
+
         <div class="hero-stat-pill">
+
           <i class="fa-solid fa-handshake"></i>
+
           <div>
+
             <b>BAIRA Member</b>
+
             <span>Ethical Manpower Alliance</span>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <!-- WHO WE ARE SECTION -->
+
 <section class="section about-who-we-are">
+
   <div class="wrap split">
+
     <!-- Left Column: Story -->
+
     <div class="who-we-are-content">
+
       <p class="eyebrow reveal"><i class="fa-solid fa-compass"></i> Our Story</p>
+
       <h2 class="reveal" data-d="1">Who We Are</h2>
+
       <p class="lede reveal" data-d="1" style="margin-top:14px">Catharsis International excels in sourcing and mobilising a diverse range of professionals — skilled, semi-skilled and unskilled workers. With a strategic focus on meeting specific requirements of overseas employers, Catharsis stands out with its extensive testing facilities and efficient mobilisation processes.</p>
+
       <p class="lede reveal" data-d="2" style="margin-top:14px">The agency boasts dedicated infrastructure including its own training centre, medical facilities and travel agency. This integrated approach has established Catharsis as a premier one-stop service provider in international manpower recruitment.</p>
+
     </div>
+
+
 
     <!-- Right Column: Overlapping Gallery Frame -->
+
     <div class="who-we-are-gallery reveal" data-d="1">
+
       <div class="gallery-frame-main">
+
         <img src="images/fa4db48cf022a2039443b832105c8880.webp" alt="Catharsis International team" loading="lazy">
+
         <div class="gallery-badge-overlay">
+
           <i class="fa-solid fa-shield-halved"></i>
+
           <div>
+
             <b>Govt. License RL.-549</b>
+
             <span>ISO 9001:2015 Certified Agency</span>
+
           </div>
+
         </div>
+
       </div>
+
+
 
       <div class="gallery-frame-secondary">
+
         <img src="images/2f570f1c5bf918ce8b1d854c4bb79915.webp" alt="Catharsis International office" loading="lazy">
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <!-- DEDICATED MISSION & VISION SECTION -->
+
 <section class="section section--tint mission-vision-section">
+
   <div class="wrap" style="max-width:1320px">
+
     <div class="section-head center reveal">
+
       <p class="eyebrow eyebrow--center"><i class="fa-solid fa-bullseye"></i> Corporate Identity</p>
+
       <h2>Mission &amp; Vision</h2>
+
       <p class="lede" style="margin-top:10px">Guiding principles driving our ethical recruitment practices and commitment to global standards.</p>
+
     </div>
+
+
 
     <div class="mission-vision-dedicated-grid">
+
       <div class="mv-dedicated-card reveal" style="border-top:5px solid var(--red)">
+
         <div class="mv-card-head">
+
           <div class="mv-dedicated-icon" style="background:rgba(227,27,35,0.08);color:var(--red)"><i class="fa-solid fa-bullseye"></i></div>
+
           <div>
+
             <h3>Our Mission</h3>
+
             <span>Creating value &amp; tailored solutions</span>
+
           </div>
+
         </div>
+
         <p>We intend to create value of our business through satisfying our associates and partners. We strive to help clients and partners to achieve their target and develop their objectives by providing specific recruitment solutions.</p>
+
       </div>
+
+
 
       <div class="mv-dedicated-card reveal" data-d="1" style="border-top:5px solid var(--blue-deep)">
+
         <div class="mv-card-head">
+
           <div class="mv-dedicated-icon" style="background:rgba(0,48,135,0.08);color:var(--blue-deep)"><i class="fa-solid fa-eye"></i></div>
+
           <div>
+
             <h3>Our Vision</h3>
+
             <span>Sustainable excellence &amp; worker welfare</span>
+
           </div>
+
         </div>
+
         <p>Catharsis Group aims to become the leading organisation committed to deliver sustainable excellence in business performance by focusing on the benefit of our stakeholders. We are devoted to ensure the satisfaction of our clients and to provide job seekers a healthy, safe and excellent working environment.</p>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <!-- OBJECTIVE SECTION -->
+
 <section class="section about-objective-redesign" id="objective">
+
   <div class="wrap split" style="max-width:1320px">
+
     <!-- Left Column: Details & Checklist -->
+
     <div class="objective-content-col">
+
       <p class="eyebrow reveal"><i class="fa-solid fa-bullseye"></i> Strategic Vision</p>
 
+
+
       <h2 class="reveal" data-d="1">What We Set Out To Do</h2>
+
       <p class="lede reveal" data-d="1" style="margin-top:14px">Being a reliable agency, Catharsis International works to serve overseas employers and Bangladeshi talent with maximum transparency. Our goal is to set the gold standard as Bangladesh's most trusted and ethical manpower recruitment partner.</p>
 
+
+
       <!-- Checklist Cards Grid -->
+
       <div class="objective-points-grid reveal" data-d="2">
+
         <div class="obj-point-card">
+
           <i class="fa-solid fa-file-shield"></i>
+
           <div>
+
             <b>Verifiable Documentation</b>
+
             <span>Transparent audit trail &amp; records</span>
+
           </div>
+
         </div>
 
+
+
         <div class="obj-point-card">
+
           <i class="fa-solid fa-hand-holding-dollar"></i>
+
           <div>
+
             <b>Zero Cost Migration</b>
+
             <span>Responsible ethical deployment</span>
+
           </div>
+
         </div>
 
+
+
         <div class="obj-point-card">
+
           <i class="fa-solid fa-user-check"></i>
+
           <div>
+
             <b>Rigorous Screening</b>
+
             <span>Skills evaluation &amp; trade testing</span>
+
           </div>
+
         </div>
 
+
+
         <div class="obj-point-card">
+
           <i class="fa-solid fa-heart-pulse"></i>
+
           <div>
+
             <b>Worker Protection &amp; Welfare</b>
+
             <span>Pre-departure to post-arrival support</span>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
+
 
     <!-- Right Column: Interactive Image Frame -->
+
     <div class="objective-media-col reveal" data-d="1">
+
       <div class="obj-img-wrapper">
+
         <img src="images/objective.webp" alt="Catharsis International Objective" loading="lazy">
+
         <div class="obj-badge-card">
+
           <div class="obj-badge-icon"><i class="fa-solid fa-building-circle-check"></i></div>
+
           <div>
+
             <b>Govt. License RL.-549</b>
+
             <span>Approved Recruitment Agency</span>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
+
+
 <!-- LEADERSHIP & GOVERNANCE SECTION -->
+
 <section class="section section--tint about-leadership-redesign" id="leadership">
+
   <div class="wrap" style="max-width:1320px">
+
     <div class="section-head center reveal">
+
       <p class="eyebrow eyebrow--center"><i class="fa-solid fa-user-tie"></i> Executive Leadership</p>
+
       <h2>Leadership &amp; Governance</h2>
+
       <p class="lede" style="margin-top:10px">Guided by certified ethical leadership and rigorous international quality standards.</p>
+
     </div>
 
+
+
     <!-- Main Leadership Profile Card -->
+
     <div class="leader-main-card reveal">
+
       <div class="leader-profile-col">
+
         <div class="leader-portrait-frame">
+
           <img src="images/Mr. Mohammed Ruhul Amin.webp" alt="Mr. Mohammed Ruhul Amin" loading="lazy">
+
           <div class="portrait-seal-chip">
+
             <i class="fa-solid fa-certificate"></i>
+
             <span>RBA &amp; IOM Trained</span>
+
           </div>
+
         </div>
+
       </div>
 
+
+
       <div class="leader-info-col">
+
         <div class="leader-header-pills">
+
           <span class="leader-role-tag"><i class="fa-solid fa-crown"></i> Founder &amp; Proprietor</span>
+
           <span class="leader-exp-tag"><i class="fa-solid fa-shield-cat"></i> 27+ Years Leadership</span>
+
         </div>
 
+
+
         <h3>Mr. Mohammed Ruhul Amin</h3>
+
         <p class="leader-designation">Proprietor, Catharsis International · Est. 1997</p>
+
+
 
         <p class="leader-bio-text">Has spearheaded Catharsis International since its founding in 1997, establishing it as a pioneer in ethical manpower recruitment. Personally holding certifications from IOM/UN Migration and comprehensive training in RBA labour, ethics, and human rights standards.</p>
 
+
+
         <div class="leader-credentials-chips">
+
           <div class="cred-chip-item"><i class="fa-solid fa-award"></i> <span>IOM / UN Migration Certified</span></div>
+
           <div class="cred-chip-item"><i class="fa-solid fa-user-shield"></i> <span>RBA Trained (VAP, CAP &amp; SVAP)</span></div>
+
         </div>
+
       </div>
+
     </div>
+
+
 
     <!-- ISO 9001:2015 Large Showcase Card -->
+
     <div class="iso-large-showcase-card reveal" data-d="1">
+
       <div class="iso-showcase-grid">
+
         <!-- Left: Certificate Display -->
+
         <div class="iso-cert-frame-large">
+
           <img src="images/ISO_certificate.webp" alt="ISO 9001:2015 Certificate — Catharsis International" loading="lazy">
+
           
+
           <div class="iso-zoom-overlay">
+
             <a href="images/ISO_certificate.webp" target="_blank" rel="noopener" class="iso-zoom-btn">
+
               <i class="fa-solid fa-magnifying-glass-plus"></i> View High-Res Certificate
+
             </a>
+
           </div>
+
+
 
           <div class="iso-cert-badge-floating">
+
             <i class="fa-solid fa-certificate"></i>
+
             <div>
+
               <b>ISO 9001:2015</b>
+
               <span>Officially Accredited</span>
+
             </div>
+
           </div>
+
         </div>
+
+
 
         <!-- Right: Certification Details -->
+
         <div class="iso-details-col">
+
           <div class="bilingual-pill">
+
             <span class="pill-en"><i class="fa-solid fa-award"></i> Quality Management System</span>
+
           </div>
+
+
 
           <h3>ISO 9001:2015 Certification</h3>
+
           <p class="iso-desc">Catharsis International maintains ISO 9001:2015 certification for its internal operational quality management system, ensuring standardized workflows, documented procedural controls, and continuous quality control across all internal recruitment operations.</p>
 
+
+
           <div class="iso-audit-points-grid">
+
             <div class="iso-audit-item">
+
               <i class="fa-solid fa-clipboard-check"></i>
+
               <div>
+
                 <b>Documented Process</b>
+
                 <span>Traceable workflow for every recruitment file from demand letter to departure</span>
+
               </div>
+
             </div>
 
+
+
             <div class="iso-audit-item">
+
               <i class="fa-solid fa-magnifying-glass-chart"></i>
+
               <div>
+
                 <b>Surveillance Audits</b>
+
                 <span>Annual third-party surveillance audits &amp; continuous improvement log</span>
+
               </div>
+
             </div>
 
+
+
             <div class="iso-audit-item">
+
               <i class="fa-solid fa-user-shield"></i>
+
               <div>
+
                 <b>Ethical Compliance</b>
+
                 <span>Full alignment with international fair recruitment and migration standards</span>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <!-- ORGANOGRAM SECTION (OFFICIAL ORGANOGRAM IMAGE SHOWCASE) -->
+
 <section class="section section--tint" id="organogram">
+
   <div class="wrap wrap-1320">
+
     <div class="section-head center reveal">
+
       <p class="eyebrow eyebrow--center"><i class="fa-solid fa-sitemap"></i> Governance Hierarchy</p>
+
       <h2>Organizational Structure</h2>
+
       <p class="lede mt-10">Official Organogram demonstrating Catharsis International's executive and operational hierarchy.</p>
+
     </div>
+
+
 
     <!-- Official Organogram Display Frame -->
+
     <div class="reveal mt-36">
+
       <div class="organogram-frame-card">
+
         <a href="images/organogram.webp" target="_blank" rel="noopener" title="Click to view full resolution organogram" class="organogram-img-link">
+
           <img src="images/organogram.webp" alt="Catharsis International Official Organogram" class="organogram-img">
+
         </a>
+
       </div>
+
     </div>
 
+
+
   </div>
+
 </section>
+
+
 
 <!-- VALUES SECTION -->
+
 <section class="section section--tint values-redesign" id="values">
+
   <div class="wrap wrap-1320">
+
     <div class="section-head center reveal">
+
       <p class="eyebrow eyebrow--center"><i class="fa-solid fa-gem"></i> Core Operating Principles</p>
+
       <h2>Three values, applied to every file we open</h2>
+
       <p class="lede mt-12 wrap-680 mx-auto">At Catharsis International, our reputation rests on these three uncompromising principles, applied to every candidate interview, employer requirement, and international deployment.</p>
+
     </div>
+
     
+
     <div class="grid-3 mt-44">
+
       <!-- VALUE 1: RESPECT -->
+
       <div class="value-card reveal">
+
         <div>
+
           <div class="value-card__header">
+
             <span class="value-num">01</span>
+
             <div class="value-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+
           </div>
+
           <div class="value-card__body">
+
             <h3>Respect &amp; Meritocracy</h3>
+
             <p>Respect is best demonstrated by delivering exceptional quality to clients and candidates alike. We hire and promote strictly on merit, honouring the diverse cultures we operate across and upholding human dignity at every step.</p>
+
           </div>
+
         </div>
+
         <div class="value-card__badge">
+
           <i class="fa-solid fa-circle-check"></i> Merit-Based Selection &amp; Dignity
+
         </div>
+
       </div>
+
       
+
       <!-- VALUE 2: INTEGRITY -->
+
       <div class="value-card reveal" data-d="1">
+
         <div>
+
           <div class="value-card__header">
+
             <span class="value-num">02</span>
+
             <div class="value-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+
           </div>
+
           <div class="value-card__body">
+
             <h3>Integrity &amp; Transparency</h3>
+
             <p>Integrity allows reaching the right decisions faster. At the heart of integrity is total transparency in Catharsis Group's actions, motives, timelines, and terms — "Walking the talk" to build lifelong trust with every partner.</p>
+
           </div>
+
         </div>
+
         <div class="value-card__badge">
+
           <i class="fa-solid fa-circle-check"></i> 100% Transparent Protocols
+
         </div>
+
       </div>
+
       
+
       <!-- VALUE 3: URGENCY -->
+
       <div class="value-card reveal" data-d="2">
+
         <div>
+
           <div class="value-card__header">
+
             <span class="value-num">03</span>
+
             <div class="value-icon"><i class="fa-solid fa-bolt"></i></div>
+
           </div>
+
           <div class="value-card__body">
+
             <h3>Sense of Urgency &amp; Speed</h3>
+
             <p>Speed and simplicity are fundamental. We operate with a laser-focused goal orientation, breaking bureaucratic barriers and reducing friction to ensure swift, flawless candidate deployments.</p>
+
           </div>
+
         </div>
+
         <div class="value-card__badge">
+
           <i class="fa-solid fa-circle-check"></i> Rapid Processing Guarantee
+
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <!-- ZERO COST MIGRATION SECTION -->
+
 <section class="section zero-redesign" id="zero-cost">
+
   <div class="wrap wrap-1320">
+
     <div class="zero-card reveal">
+
       <div class="zero-card__content">
+
         <p class="eyebrow"><i class="fa-solid fa-hand-holding-heart"></i> Ethical Recruitment Leader</p>
+
         <h2>Zero Cost Migration for Bangladeshi Workers</h2>
+
         <p class="lede">Since 2021, Catharsis International has facilitated zero-cost and ethical migration pathways across key international destination countries — upholding worker rights, zero recruitment fees, and full government approval.</p>
+
         
+
         <div class="zero-features">
+
           <div class="zero-feature"><i class="fa-solid fa-circle-check"></i> <span>No Recruitment Fees</span></div>
+
           <div class="zero-feature"><i class="fa-solid fa-circle-check"></i> <span>Ethical Sourcing</span></div>
+
           <div class="zero-feature"><i class="fa-solid fa-circle-check"></i> <span>Govt. Approved RL-549</span></div>
+
         </div>
+
+
 
         <div class="mt-32">
+
           <a class="btn btn-hero-primary" href="contact.html">
+
             <span>Inquire About Zero Cost Migration</span>
+
             <i class="fa-solid fa-arrow-right-long"></i>
+
           </a>
+
         </div>
+
       </div>
+
+
 
       <div class="zero-video-container">
+
         <div class="video-container-card">
+
           <iframe src="https://www.youtube.com/embed/xHsXYVc4YEs" title="Catharsis International’s No-Cost Migration to Malaysia | Zero-Cost | Free Migration | 2024" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <!-- MEDIA & PRESS FE<!-- MEDIA & PRESS FEATURING SECTION -->
+
 <section class="section media-news-section" id="media-news">
+
   <div class="wrap">
+
     <div class="section-head center reveal">
+
       <p class="eyebrow eyebrow--center"><i class="fa-solid fa-newspaper"></i> Media &amp; Press Featuring</p>
+
       <h2>Catharsis in National &amp; Global News</h2>
+
       <p class="lede" style="margin-top:12px; margin-inline:auto;">Highlighting our ethical recruitment milestones, worker welfare initiatives, and corporate coverage across leading press publications.</p>
+
     </div>
+
+
 
     <!-- Featured Media News Cards Grid (3x2 Balanced Grid) -->
+
     <div id="media-news-container" class="reveal media-news-grid">
+
       
+
       <!-- MEDIA CARD 1: EKHON TV -->
+
       <div class="media-news-card">
+
         <div>
-          <div class="media-card-top-bar">
-            <span class="media-channel-badge"><i class="fa-solid fa-tv" style="color:var(--red)"></i> EKHON TV</span>
-            <span class="media-tag-pill tag-red">NATIONAL PRESS</span>
-          </div>
+
           <div class="video-container-card">
+
             <iframe src="https://www.youtube.com/embed/unJLJsCze3g?si=96YUQzELAto7sm8t" title="EKHON TV - সব খরচ বহন করছে ক্যাথারসিস" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
           </div>
+
           <h3>সব খরচ বহন করছে ক্যাথারসিস: বিনা খরচে মালয়েশিয়া গমনের স্বপ্নপূরণ</h3>
-          <p>এখন টিভি জাতীয় সংবাদ প্রকাশনা — ক্যাথারসিস গ্রুপ কর্তৃক মালয়েশিয়াগামী কর্মীদের সমস্ত অভিবাসন খরচ বহনের ওপর বিশেষ রিপোর্ট।</p>
+
+          <p>এখন টিভি জাতীয় সংবাদ প্রকাশনা — ক্যাথারসিস গ্রুপ কর্তৃক মালয়েশিয়াগামী কর্মীদের সমস্ত অভিবাসন খরচ বহনের ওপর বিশেষ রিপর্ট।</p>
+
         </div>
+
       </div>
+
+
 
       <!-- MEDIA CARD 2: PROBASH BARTA 1 -->
+
       <div class="media-news-card">
+
         <div>
-          <div class="media-card-top-bar">
-            <span class="media-channel-badge"><i class="fa-solid fa-newspaper" style="color:var(--blue)"></i> Probash Barta (PBC)</span>
-            <span class="media-tag-pill">ZERO COST MIGRATION</span>
-          </div>
+
           <div class="video-container-card">
+
             <iframe src="https://www.youtube.com/embed/Gad9DvdweIE?si=519yvQOfaCOIBhBo" title="PBC - Zero Cost Migration from Bangladesh" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
           </div>
+
           <h3>Zero Cost Migration from Bangladesh: ইন্টারভিউ ও নির্বাচন পদ্ধতি</h3>
-          <p>প্রবাস বার্তা চ্যানেল রিপোটিং — ক্যাথারসিস ইন্টারন্যাশনাল কর্তৃক স্বচ্ছ ও বিনামূল্যে কর্মী নির্বাচনের সাক্ষাৎকার গ্রহণ প্রসেস।</p>
+
+          <p>প্রবাস বার্তা চ্যানেল রিপটিং — ক্যাথারসিস ইন্টারন্যাশনাল কর্তৃক স্বচ্ছ ও বিনামূল্যে কর্মী নির্বাচনের সাক্ষাৎকার গ্রহণ প্রসেস।</p>
+
         </div>
+
       </div>
+
+
 
       <!-- MEDIA CARD 3: PROBASH BARTA 2 -->
+
       <div class="media-news-card">
+
         <div>
-          <div class="media-card-top-bar">
-            <span class="media-channel-badge"><i class="fa-solid fa-plane-departure" style="color:var(--blue)"></i> Probash Barta (PBC)</span>
-            <span class="media-tag-pill">WORKER DEPLOYMENT</span>
-          </div>
+
           <div class="video-container-card">
+
             <iframe src="https://www.youtube.com/embed/NkcBMrUDXVM?si=D0B25oamzHGvR85A" title="PBC - সম্পূর্ণ বিনামূল্যে মালয়েশিয়া: আরও ১১১৯ কর্মী" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
           </div>
+
           <h3>সম্পূর্ণ বিনামূল্যে মালয়েশিয়া: আরও ১১৯ কর্মীর সফল বহির্গমন</h3>
-          <p>একটানা শূন্য অভিবাসন খরচে প্রবাস বার্তা কাভারেজ — ১১৯ জন দক্ষ কর্মী ফ্লাইট পেয়ে সফলভাবে মালয়েশিয়া পৌঁছানোর চিত্র।</p>
+
+          <p>একটানা শূন্য অভিবাসন খরচে প্রবাস বার্তা কাভারেজ — ১১৯ জন দক্ষ কর্মী ফ্লাইট পেয়ে সফলভাবে মালয়েশিয়া পৌঁছানর চিত্র।</p>
+
         </div>
+
       </div>
+
+
 
       <!-- MEDIA CARD 4: WORLD MIGRATION WM -->
+
       <div class="media-news-card">
+
         <div>
-          <div class="media-card-top-bar">
-            <span class="media-channel-badge"><i class="fa-solid fa-earth-americas" style="color:var(--blue)"></i> WORLD MIGRATION (WM)</span>
-            <span class="media-tag-pill">GLOBAL MIGRATION</span>
-          </div>
+
           <div class="video-container-card">
+
             <iframe src="https://www.youtube.com/embed/InQKXA_EiP4?si=CTYDxqD5Df8onxbA" title="World Migration WM - Zero Cost Migration: 31 Workers" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
           </div>
+
           <h3>Zero Cost Migration: 31 Workers Flying to Malaysia</h3>
-          <p>ওয়ার্ল্ড মাইগ্রেশন গ্লোবাল কাভারেজ — ৩১ জন বাংলাদেশি কর্মীর শূন্য খরচে মালয়েশিয়ায় নিয়োগ লাভ ও ফ্লাইটের আন্তর্জাতিক খবর।</p>
+
+          <p>ওয়ার্ল্ড মাইগ্রেশন গ্লবাল কাভারেজ — ৩১ জন বাংলাদেশি কর্মীর শূন্য খরচে মালয়েশিয়ায় নিয়গ লাভ ও ফ্লাইটের আন্তর্জাতিক খবর।</p>
+
         </div>
+
       </div>
+
+
 
       <!-- MEDIA CARD 5: PROBASH BARTA 3 -->
+
       <div class="media-news-card">
+
         <div>
-          <div class="media-card-top-bar">
-            <span class="media-channel-badge"><i class="fa-solid fa-bullhorn" style="color:var(--gold)"></i> Probash Barta (PBC)</span>
-            <span class="media-tag-pill tag-gold">ZERO MIGRATION COST</span>
-          </div>
+
           <div class="video-container-card">
+
             <iframe src="https://www.youtube.com/embed/6KCHspDVU1w?si=vP0QBKJ15_TPEcFv" title="PBC - সম্পূর্ণ বিনামূল্যে ২০ কর্মী গেল মালয়েশিয়া" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
           </div>
+
           <h3>সম্পূর্ণ বিনামূল্যে ২০ কর্মী গেল মালয়েশিয়া: ক্যাথারসিস গ্রুপ ইনিশিয়েটিভ</h3>
-          <p>ক্যাথারসিস ইন্টারন্যাশনালের সৌজন্যে কোনো ফি বা খরচ ছাড়াই বিমান টিকিট ও ভিসা প্রসেসিং পেয়ে বিদেশে কাজের নতুন দিগন্ত।</p>
+
+          <p>ক্যাথারসিস ইন্টারন্যাশনালের সৌজন্যে কন ফি বা খরচ ছাড়াই বিমান টিকিট ও ভিসা প্রসেসিং পেয়ে বিদেশে কাজের নতুন দিগন্ত।</p>
+
         </div>
+
       </div>
+
+
 
       <!-- MEDIA CARD 6: OFFICIAL PRESS & MEDIA SPOTLIGHT -->
+
       <div class="media-news-card-spotlight">
+
         <div>
-          <div class="media-card-top-bar">
-            <span class="media-channel-badge" style="color:#FFF;"><i class="fa-solid fa-certificate" style="color:var(--gold)"></i> VERIFIED STANDARDS</span>
-            <span class="media-tag-pill tag-gold">ETHICAL RECRUITMENT</span>
-          </div>
+
           <div style="text-align:center; padding-block: 16px;">
+
             <i class="fa-solid fa-shield-halved" style="color:var(--gold); font-size: 32px; margin-bottom: 12px; display:inline-block;"></i>
+
             <h3>Zero-Cost Migration &amp; Ethical Media Protection</h3>
+
             <p>Catharsis International operates strictly under ISO 9001:2015, IOM UN Migration, and RBA international labor standards, protecting candidates from third-party exploitation.</p>
+
           </div>
+
         </div>
+
         <div style="padding-top:16px; border-top: 1px solid rgba(255,255,255,0.15); text-align:center;">
+
           <a href="contact.html" class="btn btn--gold" style="width:100%; justify-content:center;"><i class="fa-solid fa-envelope"></i> Media &amp; Press Contact</a>
+
         </div>
+
       </div>
 
+
+
     </div>
+
+
 
     <!-- Press Desk Contact Button -->
+
     <div style="margin-top:40px; text-align:center;">
+
       <a href="contact.html" class="btn btn--primary"><i class="fa-solid fa-paper-plane"></i> Contact Press &amp; Media Desk</a>
+
     </div>
 
+
+
   </div>
-</section>�নো ফি বা খরচ ছাড়াই বিমান টিকিট ও ভিসা প্রসেসিং পেয়ে বিদেশে কাজের নতুন দিগন্ত।</p>
+
+</section>ন ফি বা খরচ ছাড়াই বিমান টিকিট ও ভিসা প্রসেসিং পেয়ে বিদেশে কাজের নতুন দিগন্ত।</p>
+
         </div>
+
       </div>
+
+
 
       <!-- MEDIA CARD 6: OFFICIAL PRESS & MEDIA SPOTLIGHT -->
+
       <div class="media-news-card-spotlight">
+
         <div>
+
           <div class="flex-between mb-16">
+
             <span class="flex-center flex-gap-6 text-gold font-bold text-sm"><i class="fa-solid fa-certificate"></i> VERIFIED STANDARDS</span>
+
             <span class="badge-tag badge-tag-white">ETHICAL RECRUITMENT</span>
+
           </div>
+
           <div class="text-center py-20">
+
             <i class="fa-solid fa-shield-halved text-gold mb-14"></i>
+
             <h3 class="font-display text-white mb-10 font-semibold">Zero-Cost Migration &amp; Ethical Media Protection</h3>
+
             <p class="text-white text-sm mb-0">Catharsis International operates strictly under ISO 9001:2015, IOM UN Migration, and RBA international labor standards, protecting candidates from third-party exploitation.</p>
+
           </div>
+
         </div>
+
         <div class="pt-16 border-top-light text-center">
+
           <a href="contact.html" class="btn btn-hero-primary w-100 flex-center"><i class="fa-solid fa-envelope"></i> Media &amp; Press Contact</a>
+
         </div>
+
       </div>
 
+
+
     </div>
+
+
 
     <!-- Press Desk Contact Strip -->
+
       <a href="mailto:info@catharsisintl.com" class="btn btn-hero-primary" style="padding:10px 20px; font-size:13.5px"><i class="fa-solid fa-envelope"></i> Contact Press Desk</a>
+
     </div>
 
+
+
   </div>
+
 </section>
+
+
 
 <!-- CTA SECTION -->
+
 <section class="section" style="background:#FFFFFF; color:var(--ink); border-top:1px solid rgba(0,48,135,0.1);">
+
   <div class="wrap center" style="max-width:1320px">
+
     <div class="section-head center reveal" style="max-width:640px;margin-bottom:32px">
+
       <p class="eyebrow eyebrow--center"><i class="fa-solid fa-handshake"></i> Ready to work with us?</p>
+
       <h2>Start a conversation with Catharsis International</h2>
+
       <p class="lede" style="margin-top:14px">Whether you are an employer with a vacancy or a worker seeking placement — we have the process and the record to help.</p>
+
     </div>
+
     <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center" class="reveal" data-d="1">
+
       <a class="btn btn-hero-primary" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact us today</a>
+
       <a class="btn btn-hero-secondary" href="recruitment-process.html"><i class="fa-solid fa-list-check"></i> See our process</a>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 </main>
 
+
+
 <!-- FOOTER COMPONENT -->
+
 <div id="footer-component"></div>
 
+
+
 <script src="assets/js/components.js"></script>
+
 <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
+
