@@ -1917,3 +1917,155 @@ img, iframe, canvas, video {
   letter-spacing: 1px;
 }
 
+/* ============================================================
+   COMPREHENSIVE MOBILE & TABLET RESPONSIVE SYSTEM
+   ============================================================ */
+
+/* ---------- TABLETS & MEDIUM MOBILE (< 900px) ---------- */
+@media (max-width: 900px) {
+  .section { padding: clamp(38px, 5vw, 56px) 0 !important; }
+  .wrap { padding-inline: clamp(16px, 4vw, 24px) !important; }
+
+  /* Hero Grids & Spacing */
+  .proc-hero-grid,
+  .about-hero-grid,
+  .services-hero-grid,
+  .docs-hero-grid,
+  .sectors-hero-grid,
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .proc-hero-wrap,
+  .about-hero-wrap,
+  .hero-wrap {
+    padding-top: calc(var(--nav-h) + 20px) !important;
+    padding-bottom: 40px !important;
+  }
+
+  /* Grid Layouts */
+  .grid-2, .grid-3, .grid-4, .split, .sister-grid, .proc-grid, .media-news-grid,
+  .mission-vision-dedicated-grid, .objective-points-grid, .iso-audit-points-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* CTA Banners */
+  .proc-cta-flex, .sec-cta-flex, .cta-banner-flex {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+  }
+  .proc-cta-flex > div, .sec-cta-flex > div {
+    max-width: 100% !important;
+  }
+
+  /* Organogram Container */
+  .otree {
+    justify-content: flex-start !important;
+    padding-inline: 10px !important;
+  }
+
+  /* Page Headers */
+  .phase-header-banner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+}
+
+/* ---------- SMARTPHONES (< 768px) ---------- */
+@media (max-width: 768px) {
+  /* Toolbar (Filter & Search) */
+  .proc-toolbar-card,
+  .docs-toolbar-card,
+  .sectors-toolbar-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 16px !important;
+    padding: 14px 16px !important;
+    margin-top: -15px !important;
+  }
+  .proc-filter-group,
+  .docs-filter-group,
+  .sectors-filter-group {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    padding-bottom: 6px !important;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap !important;
+  }
+  .proc-filter-btn,
+  .docs-filter-btn,
+  .sectors-filter-btn {
+    flex: none !important;
+  }
+  .proc-search-box,
+  .docs-search-box,
+  .sectors-search-box {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Hero Stats */
+  .proc-hero-stats,
+  .about-hero-stats,
+  .docs-hero-stats {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+    gap: 10px !important;
+  }
+  .hero-stat-pill {
+    padding: 9px 12px !important;
+  }
+  .hero-stat-pill b {
+    font-size: 12px !important;
+  }
+  .hero-stat-pill span {
+    font-size: 10px !important;
+  }
+
+  /* Card Paddings */
+  .proc-card,
+  .media-news-card,
+  .phase-overview-card,
+  .sec-card,
+  .sister-card,
+  .iso-audit-item {
+    padding: 18px 16px !important;
+    border-radius: 18px !important;
+  }
+
+  /* Responsive Typography */
+  h1, .proc-hero-title, .about-hero-title {
+    font-size: clamp(26px, 6.5vw, 36px) !important;
+  }
+  h2 {
+    font-size: clamp(22px, 5.5vw, 30px) !important;
+  }
+  h3 {
+    font-size: clamp(18px, 4.5vw, 24px) !important;
+  }
+  .lede {
+    font-size: 14.5px !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* ---------- SMALL SMARTPHONES (< 480px) ---------- */
+@media (max-width: 480px) {
+  /* Full Width Buttons */
+  .btn, .link-arrow {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .proc-hero-stats,
+  .about-hero-stats,
+  .docs-hero-stats {
+    grid-template-columns: 1fr !important;
+  }
+}
+
